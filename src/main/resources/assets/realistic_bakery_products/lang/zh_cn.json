@@ -1,0 +1,50 @@
+{
+  "itemGroup.minecraft.realistic_bakery_products":"真实烘焙食品",
+  "item.realistic_bakery_products.raw_bread": "生面包",
+  "item.realistic_bakery_products.raw_cookie": "生曲奇",
+  "item.realistic_bakery_products.raw_cake": "生蛋糕",
+  "item.realistic_bakery_products.dough": "生面团",
+  "item.realistic_bakery_products.flour": "面粉",
+
+  "item.realistic_bakery_products.raw_pumpkin_pie": "生南瓜派",
+  "item.realistic_bakery_products.raw_melon_pie": "生西瓜派",
+  "item.realistic_bakery_products.raw_berries_pie": "生浆果派",
+  "item.realistic_bakery_products.raw_honey_pie": "生蜂蜜派",
+
+  "item.realistic_bakery_products.raw_honey_cake": "生蜂蜜蛋糕",
+  "item.realistic_bakery_products.raw_chocolate_cake": "生巧克力蛋糕",
+  "item.realistic_bakery_products.raw_strawberry_cake": "生草莓蛋糕",
+
+  "item.realistic_bakery_products.melon_pie": "西瓜派",
+  "item.realistic_bakery_products.berries_pie": "浆果派",
+  "item.realistic_bakery_products.honey_pie": "蜂蜜派",
+
+  "item.realistic_bakery_products.cream": "奶油",
+  "item.realistic_bakery_products.chocolate_cream": "巧克力奶油",
+  "item.realistic_bakery_products.strawberry_cream": "草莓奶油",
+  "item.realistic_bakery_products.honey_cream": "蜂蜜奶油",
+
+  "item.realistic_bakery_products.strawberry_donut": "草莓甜甜圈",
+  "item.realistic_bakery_products.chocolate_donut": "巧克力甜甜圈",
+  "item.realistic_bakery_products.honey_donut": "蜂蜜甜甜圈",
+  "item.realistic_bakery_products.cream_donut": "甜甜圈奶油",
+  "item.realistic_bakery_products.coked_donut": "焦糖甜甜圈",
+
+  "item.realistic_bakery_products.raw_strawberry_donut": "生草莓甜甜圈",
+  "item.realistic_bakery_products.raw_chocolate_donut": "生巧克力甜甜圈",
+  "item.realistic_bakery_products.raw_honey_donut": "生蜂蜜甜甜圈",
+  "item.realistic_bakery_products.raw_cream_donut": "生奶油甜甜圈",
+  "item.realistic_bakery_products.raw_donut": "生甜甜圈",
+
+  "block.realistic_bakery_products.chocolate_cake": "巧克力蛋糕",
+  "block.realistic_bakery_products.honey_cake": "蜂蜜蛋糕",
+  "block.realistic_bakery_products.strawberry_cake": "草莓蛋糕",
+
+  "item.realistic_bakery_products.strawberry": "草莓",
+  "block.realistic_bakery_products.strawberrybush": "草莓丛",
+  
+    //New//
+  "item.realistic_bakery_products.carrot_pie": "胡萝卜派",
+  "item.realistic_bakery_products.raw_carrot_pie": "生胡萝卜派",
+  "item.realistic_bakery_products.raw_honey_shortcake": "生蜂蜜蛋糕"
+}
