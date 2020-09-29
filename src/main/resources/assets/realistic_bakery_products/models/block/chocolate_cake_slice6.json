@@ -1,0 +1,24 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"4": "realistic_bakery_products:block/chocolate_cake_side",
+		"5": "realistic_bakery_products:block/chocolate_cake_top",
+		"6": "realistic_bakery_products:block/chocolate_cake_inner",
+		"particle": "realistic_bakery_products:block/chocolate_cake_top",
+		"bottom": "block/cake_bottom"
+	},
+	"elements": [
+		{
+			"from": [13, 0, 1],
+			"to": [15, 8, 15],
+			"faces": {
+				"north": {"uv": [1, 8, 3, 16], "texture": "#4"},
+				"east": {"uv": [1, 8, 15, 16], "texture": "#4"},
+				"south": {"uv": [13, 8, 15, 16], "texture": "#4"},
+				"west": {"uv": [1, 8, 15, 16], "texture": "#6"},
+				"up": {"uv": [13, 1, 15, 15], "texture": "#5"},
+				"down": {"uv": [13, 1, 15, 15], "texture": "#bottom", "cullface": "down"}
+			}
+		}
+	]
+}
