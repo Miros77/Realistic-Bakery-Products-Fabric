@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"parent": "block/crop",
 	"textures": {
-		"crop": "realistic_bakery_products:block/strawberry_stage0"
+		"crop": "realistic_bakery_products:block/crop/strawberry/strawberry_stage0"
 	},
 	"elements": [
 		{

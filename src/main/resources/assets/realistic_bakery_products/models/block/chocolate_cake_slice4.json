@@ -1,11 +1,11 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"1": "realistic_bakery_products:block/chocolate_cake_top",
-		"2": "realistic_bakery_products:block/chocolate_cake_inner",
-		"3": "realistic_bakery_products:block/chocolate_cake_side",
-		"particle": "realistic_bakery_products:block/chocolate_cake_top",
-		"bottom": "block/cake_bottom"
+		"1": "realistic_bakery_products:block/cake/chocolate_cake/chocolate_cake_top",
+		"2": "realistic_bakery_products:block/cake/chocolate_cake/chocolate_cake_inner",
+		"3": "realistic_bakery_products:block/cake/chocolate_cake/chocolate_cake_side",
+		"particle": "realistic_bakery_products:block/cake/chocolate_cake/chocolate_cake_top",
+		"bottom": "realistic_bakery_products:block/cake/cake_bottom"
 	},
 	"elements": [
 		{

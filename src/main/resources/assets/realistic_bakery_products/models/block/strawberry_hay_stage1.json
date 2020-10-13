@@ -2,9 +2,9 @@
 	"credit": "Made with Blockbench",
 	"parent": "block/crop",
 	"textures": {
-		"1": "realistic_bakery_products:block/straw",
-		"particle": "realistic_bakery_products:block/straw",
-		"crop": "realistic_bakery_products:block/strawberry_stage0"
+		"1": "realistic_bakery_products:block/crop/strawberry/straw",
+		"particle": "realistic_bakery_products:block/crop/strawberry/straw",
+		"crop": "realistic_bakery_products:block/crop/strawberry/strawberry_stage0"
 	},
 	"elements": [
 		{

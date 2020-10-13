@@ -1,11 +1,11 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"4": "realistic_bakery_products:block/strawberry_cake_top",
-		"5": "realistic_bakery_products:block/strawberry_cake_inner",
-		"6": "realistic_bakery_products:block/strawberry_cake_side",
-		"bottom": "block/cake_bottom",
-		"particle": "realistic_bakery_products:block/strawberry_cake_top"
+		"4": "realistic_bakery_products:block/cake/strawberry_cake/strawberry_cake_top",
+		"5": "realistic_bakery_products:block/cake/strawberry_cake/strawberry_cake_inner",
+		"6": "realistic_bakery_products:block/cake/strawberry_cake/strawberry_cake_side",
+		"particle": "realistic_bakery_products:block/cake/strawberry_cake/strawberry_cake_top",
+		"bottom": "realistic_bakery_products:block/cake/cake_bottom"
 	},
 	"elements": [
 		{
