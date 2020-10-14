@@ -43,8 +43,36 @@
   "item.realistic_bakery_products.strawberry": "草莓",
   "block.realistic_bakery_products.strawberrybush": "草莓丛",
   
-    //New//
   "item.realistic_bakery_products.carrot_pie": "胡萝卜派",
   "item.realistic_bakery_products.raw_carrot_pie": "生胡萝卜派",
-  "item.realistic_bakery_products.raw_honey_shortcake": "生蜂蜜蛋糕"
+  "item.realistic_bakery_products.raw_honey_shortcake": "生蜂蜜蛋糕",
+
+   "item.realistic_bakery_products.pumpkin_slice": "南瓜片",
+
+  "item.realistic_bakery_products.chocolate_cookie": "巧克力曲奇",
+  "item.realistic_bakery_products.raw_chocolate_cookie": "生巧克力曲奇",
+  "item.realistic_bakery_products.crumbs_cookie": "曲奇屑",
+  "item.realistic_bakery_products.bun": "圆面包",
+  "item.realistic_bakery_products.raw_strawberry_pie": "生草莓派",
+  "item.realistic_bakery_products.strawberry_pie": "草莓派",
+  "item.realistic_bakery_products.chocolate_dough": "巧克力面团",
+
+  "item.realistic_bakery_products.strawberry_seed": "草莓种子",
+  "item.realistic_bakery_products.strawberry_hay": "草莓干草",
+  "item.realistic_bakery_products.strawberry_big": "大草莓",
+
+  //NEW
+
+  //Block
+  "block.realistic_bakery_products.strawberrybush_hay": "Strawberrybush Hay",
+  "block.realistic_bakery_products.raw_cake": "Raw Cake",
+  "block.realistic_bakery_products.raw_chocolate_cake": "Raw Chocolate Cake",
+  "block.realistic_bakery_products.raw_strawberry_cake": "Raw Strawberry Cake",
+  "block.realistic_bakery_products.raw_honey_cake": "Raw Honey Cake",
+  "block.realistic_bakery_products.cheese_block": "Cheese Block",
+  "block.realistic_bakery_products.pizza": "Pizza",
+  "block.realistic_bakery_products.raw_pizza": "Raw Pizza",
+
+  //Item
+  "item.realistic_bakery_products.cheese_slice": "Cheese Slice"
 }
