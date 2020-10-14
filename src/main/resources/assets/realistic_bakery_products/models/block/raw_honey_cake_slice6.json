@@ -3,7 +3,8 @@
 	"textures": {
 		"2": "realistic_bakery_products:block/cake/honey_cake/honey_cake_side",
 		"4": "realistic_bakery_products:block/cake/honey_cake/honey_cake_inner",
-		"5": "realistic_bakery_products:block/raw_cake/raw_honey_cake/honey_cake_top"
+		"5": "realistic_bakery_products:block/raw_cake/raw_honey_cake/honey_cake_top",
+				"particle": "realistic_bakery_products:block/raw_cake/raw_honey_cake/honey_cake_top"
 	},
 	"elements": [
 		{

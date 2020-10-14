@@ -5,7 +5,8 @@
 		"5": "realistic_bakery_products:block/pizza/beetroot_slice",
 		"6": "realistic_bakery_products:block/pizza/pizza",
 		"8": "realistic_bakery_products:block/pizza/sausage",
-		"9": "block/brown_mushroom"
+		"9": "block/brown_mushroom",
+		"particle": "block/brown_mushroom"
 	},
 	"elements": [
 		{

@@ -4,7 +4,8 @@
 		"7": "realistic_bakery_products:block/raw_cake/raw_chocolate_cake/raw_chocolate_cake_side",
 		"8": "realistic_bakery_products:block/raw_cake/raw_chocolate_cake/raw_chocolate_cake_top",
 		"9": "realistic_bakery_products:block/raw_cake/raw_chocolate_cake/raw_cake_bottom",
-		"10": "realistic_bakery_products:block/raw_cake/raw_chocolate_cake/raw_chocolate_cake_inner"
+		"10": "realistic_bakery_products:block/raw_cake/raw_chocolate_cake/raw_chocolate_cake_inner",
+				"particle": "realistic_bakery_products:block/raw_cake/raw_chocolate_cake/raw_chocolate_cake_top"
 	},
 	"elements": [
 		{

@@ -1,7 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"6": "realistic_bakery_products:block/cheese/cheese_inner"
+		"6": "realistic_bakery_products:block/cheese/cheese_inner",
+		"particle": "realistic_bakery_products:block/cheese/cheese_inner"
 	},
 	"elements": [
 		{

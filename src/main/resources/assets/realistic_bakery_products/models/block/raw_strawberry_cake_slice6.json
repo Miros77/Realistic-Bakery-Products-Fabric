@@ -4,7 +4,9 @@
 		"7": "realistic_bakery_products:block/raw_cake/raw_strawberry_cake/raw_cake_bottom",
 		"8": "realistic_bakery_products:block/raw_cake/raw_strawberry_cake/raw_strawberry_cake_inner",
 		"9": "realistic_bakery_products:block/raw_cake/raw_strawberry_cake/raw_strawberry_cake_side",
-		"10": "realistic_bakery_products:block/raw_cake/raw_strawberry_cake/raw_strawberry_cake_top"
+		"10": "realistic_bakery_products:block/raw_cake/raw_strawberry_cake/raw_strawberry_cake_top",
+		"bottom": "realistic_bakery_products:block/raw_cake/raw_strawberry_cake/raw_cake_bottom",
+        "particle": "realistic_bakery_products:block/cake/strawberry_cake/strawberry_cake_top"
 	},
 	"elements": [
 		{

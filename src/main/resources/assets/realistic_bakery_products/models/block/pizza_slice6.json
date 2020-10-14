@@ -2,7 +2,8 @@
 	"credit": "Made with Blockbench",
 	"textures": {
 		"4": "realistic_bakery_products:block/pizza/cheese_crumb",
-		"6": "realistic_bakery_products:block/pizza/pizza"
+		"6": "realistic_bakery_products:block/pizza/pizza",
+		"particle": "realistic_bakery_products:block/pizza/pizza"
 	},
 	"elements": [
 		{

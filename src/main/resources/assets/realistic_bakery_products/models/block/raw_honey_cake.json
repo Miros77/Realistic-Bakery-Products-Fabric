@@ -2,7 +2,8 @@
 	"credit": "Made with Blockbench",
 	"textures": {
 		"2": "realistic_bakery_products:block/cake/honey_cake/honey_cake_side",
-		"4": "realistic_bakery_products:items/raw_cake/raw_honey_shortcake"
+		"4": "realistic_bakery_products:items/raw_cake/raw_honey_shortcake",
+		"particle": "realistic_bakery_products:block/raw_cake/raw_honey_cake/honey_cake_top"
 	},
 	"elements": [
 		{
