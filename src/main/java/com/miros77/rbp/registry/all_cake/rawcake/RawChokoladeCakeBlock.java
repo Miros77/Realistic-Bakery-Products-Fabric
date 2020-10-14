@@ -9,6 +9,9 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.CakeBlock;
 
+//Sound
+import net.minecraft.sound.BlockSoundGroup;
+
 //Effects
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -32,7 +35,7 @@ import net.minecraft.world.WorldAccess;
 
 public class RawChokoladeCakeBlock extends CakeBlock {
 	public RawChokoladeCakeBlock() {
-		super(FabricBlockSettings.of(Material.CAKE));
+		super(FabricBlockSettings.of(Material.CAKE).ticksRandomly().noCollision().sounds(BlockSoundGroup.WOOL).nonOpaque());
 	}
 
    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {

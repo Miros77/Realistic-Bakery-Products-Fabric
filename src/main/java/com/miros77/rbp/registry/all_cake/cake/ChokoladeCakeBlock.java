@@ -1,45 +1,38 @@
 package com.miros77.rbp.registry.all_cake.cake;
 
+//Item
+import net.minecraft.item.ItemStack;
+
+//Block
+import net.minecraft.block.Material;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.CakeBlock;
 
-//import net.minecraft.entity.ai.pathing.NavigationType;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-//import net.minecraft.item.ItemStack;
-import net.minecraft.stat.Stats;
-//import net.minecraft.state.StateManager;
-//import net.minecraft.state.property.IntProperty;
-//import net.minecraft.state.property.Properties;
+//Sound
+import net.minecraft.sound.BlockSoundGroup;
+
+//Util
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
-//import net.minecraft.util.Hand;
-//import net.minecraft.util.hit.BlockHitResult;
-import net.minecraft.util.math.BlockPos;
+
+//Entity
+import net.minecraft.entity.player.PlayerEntity;
+
+//Stats
+import net.minecraft.stat.Stats;
+
+//World
+
 import net.minecraft.world.World;
-//import net.minecraft.util.math.Direction;
-  //import net.minecraft.util.shape.VoxelShape;
-  //import net.minecraft.world.BlockView;
-  //import net.minecraft.world.World;
-  import net.minecraft.world.WorldAccess;
-  //import net.minecraft.world.WorldView;
+import net.minecraft.world.WorldAccess;
 
-  
-  //Item
-
-
-//Block
-
-import net.minecraft.block.Material;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-
-
-//Sound
 
 public class ChokoladeCakeBlock extends CakeBlock {
 	public ChokoladeCakeBlock() {
-		super(FabricBlockSettings.of(Material.CAKE));
+		super(FabricBlockSettings.of(Material.CAKE).ticksRandomly().noCollision().sounds(BlockSoundGroup.WOOL).nonOpaque());
 	}
 
    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {

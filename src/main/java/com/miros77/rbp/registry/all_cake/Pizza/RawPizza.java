@@ -7,6 +7,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.block.Material;
 import net.minecraft.block.ShapeContext;
 
+//Sound
+import net.minecraft.sound.BlockSoundGroup;
+
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -47,7 +50,7 @@ import net.minecraft.world.WorldView;
 public class RawPizza extends CakeBlock {
 
 	public RawPizza() {
-      super(FabricBlockSettings.of(Material.CAKE));
+      super(FabricBlockSettings.of(Material.CAKE).ticksRandomly().noCollision().sounds(BlockSoundGroup.WOOL).nonOpaque());
       this.setDefaultState((BlockState)((BlockState)this.stateManager.getDefaultState()).with(BITES, 0));
 	}
    

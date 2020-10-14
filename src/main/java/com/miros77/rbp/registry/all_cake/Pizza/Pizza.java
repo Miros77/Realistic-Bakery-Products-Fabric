@@ -7,6 +7,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.block.Material;
 import net.minecraft.block.ShapeContext;
 
+//Sound
+import net.minecraft.sound.BlockSoundGroup;
+
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -45,7 +48,7 @@ import net.minecraft.world.WorldView;
 public class Pizza extends CakeBlock {
 
 	public Pizza() {
-      super(FabricBlockSettings.of(Material.CAKE));
+      super(FabricBlockSettings.of(Material.CAKE).ticksRandomly().noCollision().sounds(BlockSoundGroup.WOOL).nonOpaque());
       this.setDefaultState((BlockState)((BlockState)this.stateManager.getDefaultState()).with(BITES, 0));
 	}
    
@@ -55,35 +58,6 @@ public class Pizza extends CakeBlock {
    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
       return BITES_TO_SHAPE[(Integer)state.get(BITES)];
    }
-
- //Test
-//	@Override
-//	protected void appendProperties(StateManager.Builder<Block, BlockState> stateManager) {
-//		stateManager.add(Properties.HORIZONTAL_FACING);
-//	}
-// 
-//	@Override
-//	public VoxelShape getOutlineShape(BlockState state, BlockView view, BlockPos pos, EntityContext ctx) {
-//		Direction dir = state.get(BITES);
-//		switch(dir) {
-//			case NORTH:
-//				return VoxelShapes.cuboid(0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.5f);
-//			case SOUTH:
-//				return VoxelShapes.cuboid(0.0f, 0.0f, 0.5f, 1.0f, 1.0f, 1.0f);
-//			case EAST:
-//				return VoxelShapes.cuboid(0.5f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f);
-//			case WEST:
-//				return VoxelShapes.cuboid(0.0f, 0.0f, 0.0f, 0.5f, 1.0f, 1.0f);
-//			default:
-//				return VoxelShapes.fullCube();
-//		}
-//	}
-// 
-//	public BlockState getPlacementState(ItemPlacementContext ctx) {
-//		return (BlockState)this.getDefaultState().with(FACING, ctx.getPlayerFacing());
-//	}
-//Test
-
 
    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
       if (world.isClient) {  
