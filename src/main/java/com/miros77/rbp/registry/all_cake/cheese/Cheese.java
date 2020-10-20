@@ -49,7 +49,7 @@ import net.minecraft.world.WorldAccess;
 
 public class Cheese extends CakeBlock {
 	public Cheese() {
-		super(FabricBlockSettings.of(Material.CAKE).ticksRandomly().noCollision().sounds(BlockSoundGroup.CORAL).nonOpaque());
+		super(FabricBlockSettings.of(Material.CAKE).ticksRandomly().sounds(BlockSoundGroup.CORAL).nonOpaque());
 	}
 
    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {

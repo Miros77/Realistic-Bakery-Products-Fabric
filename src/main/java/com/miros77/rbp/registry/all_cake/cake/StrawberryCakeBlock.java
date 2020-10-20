@@ -31,7 +31,7 @@ import net.minecraft.world.WorldAccess;
 
 public class StrawberryCakeBlock extends CakeBlock {
 	public StrawberryCakeBlock() {
-		super(FabricBlockSettings.of(Material.CAKE).ticksRandomly().noCollision().sounds(BlockSoundGroup.WOOL).nonOpaque());
+		super(FabricBlockSettings.of(Material.CAKE).ticksRandomly().sounds(BlockSoundGroup.WOOL).nonOpaque());
 	}
 
    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {

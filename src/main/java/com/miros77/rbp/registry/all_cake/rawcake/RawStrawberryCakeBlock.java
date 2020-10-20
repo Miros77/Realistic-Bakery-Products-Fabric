@@ -35,7 +35,7 @@ import net.minecraft.world.WorldAccess;
 
 public class RawStrawberryCakeBlock extends CakeBlock {
 	public RawStrawberryCakeBlock() {
-		super(FabricBlockSettings.of(Material.CAKE).ticksRandomly().noCollision().sounds(BlockSoundGroup.WOOL).nonOpaque());
+		super(FabricBlockSettings.of(Material.CAKE).ticksRandomly().sounds(BlockSoundGroup.WOOL).nonOpaque());
 	}
 
    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
