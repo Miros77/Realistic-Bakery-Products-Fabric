@@ -10,7 +10,6 @@ import net.minecraft.block.Material;
 import net.minecraft.block.SweetBerryBushBlock;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import javax.swing.text.html.BlockView;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 
 //My
@@ -39,21 +38,9 @@ import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.player.PlayerEntity;
 
-//Enchants
-import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.enchantment.Enchantments;
-
 //World
 import net.minecraft.world.World;
 
-//Not Use
-  //import net.minecraft.util.shape.VoxelShape;
-  //import net.minecraft.block.Block;
-  //import net.minecraft.block.BlockState;
-  //import net.minecraft.block.ShapeContext;
-  //import net.minecraft.util.math.BlockPos;
-  //import net.minecraft.util.shape.VoxelShape;
-  //import net.minecraft.world.BlockView;
 
 public class StrawberryBushBlockHay extends SweetBerryBushBlock {
 
@@ -100,14 +87,4 @@ public class StrawberryBushBlockHay extends SweetBerryBushBlock {
       return super.onUse(state, world, pos, player, hand, hit);
     }
   }
-
-  @Override
-  public void onStacksDropped(BlockState state, World world, BlockPos pos, ItemStack stack) {
-    ItemStack bush = new ItemStack(ModItems.STRAWBERRY_BIG);
-    super.onStacksDropped(state, world, pos, stack);
-    if (EnchantmentHelper.getLevel(Enchantments.SILK_TOUCH, stack) == 1) {
-      Block.dropStack(world, pos, bush);
-    }
-
-  } 
 }
