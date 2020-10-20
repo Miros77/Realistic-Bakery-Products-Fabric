@@ -48,7 +48,7 @@ import net.minecraft.world.WorldView;
 public class Pizza extends CakeBlock {
 
 	public Pizza() {
-      super(FabricBlockSettings.of(Material.CAKE).ticksRandomly().noCollision().sounds(BlockSoundGroup.WOOL).nonOpaque());
+            super(FabricBlockSettings.of(Material.CAKE).ticksRandomly().sounds(BlockSoundGroup.WOOL).nonOpaque());
       this.setDefaultState((BlockState)((BlockState)this.stateManager.getDefaultState()).with(BITES, 0));
 	}
    
