@@ -17,11 +17,14 @@
   "icon": "assets/realistic_bakery_products/icon.png",
 
   "environment": "*",
-  "entrypoints": {
+"entrypoints": {
     "main": [
       "com.miros77.rbp.Tutorial"
+    ],
+    "client": [
+      "com.miros77.rbp.RBPclient"
     ]
-  },
+},
   "mixins": [
   ],
 
