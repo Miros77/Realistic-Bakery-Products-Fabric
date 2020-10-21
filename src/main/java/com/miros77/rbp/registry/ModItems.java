@@ -131,6 +131,9 @@ public class ModItems {
 
     //Block
        //Crop
+	
+	//here is the bush register
+	
     public static final StrawberryBushBlock STRAWBERRYBUSH = new StrawberryBushBlock();
     public static final StrawberryBushBlockHay STRAWBERRYBUSH_HAY = new StrawberryBushBlockHay();
 
