@@ -4,7 +4,10 @@
   "version": "${version}",
 
   "name": "Realistic Bakery Products",
-  "description": "Mod will complicate the crafting of bakery products",
+  "description": "Mod will complicate the crafting of bakery products
+  
+  fixed dark texture on versions 1 16 2/1 16 3 ./ исправлена темная текстура на версиях 1 16 2/1 16 3
+  ",
   "authors": [
     "Miros77"
   ],
