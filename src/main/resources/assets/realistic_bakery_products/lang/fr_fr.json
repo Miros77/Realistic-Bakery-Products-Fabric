@@ -1,1 +1,79 @@
-//Water-Kitten add translation!! <=[it_can_be_removed]
+{
+  "itemGroup.realistic_bakery_products.realistic_bakery_products":"Realistic Bakery Products",
+  "item.realistic_bakery_products.raw_bread": "Pain Cru",
+  "item.realistic_bakery_products.raw_cookie": "Cookie Cru",
+  "item.realistic_bakery_products.raw_cake": "Gâteau Cru",
+  "item.realistic_bakery_products.dough": "Pâte",
+  "item.realistic_bakery_products.flour": "Farine",
+
+  "item.realistic_bakery_products.raw_pumpkin_pie": "Tarte à la Citrouille Crue",
+  "item.realistic_bakery_products.raw_melon_pie": "Tarte à la Pastèque Crue",
+  "item.realistic_bakery_products.raw_berries_pie": "Tarte aux Baies Crue",
+  "item.realistic_bakery_products.raw_honey_pie": "Tarte au Miel Crue",
+
+  "item.realistic_bakery_products.raw_honey_cake": "Gâteau au Miel Cru",
+  "item.realistic_bakery_products.raw_chocolate_cake": "Gâteau au Chocolat Cru",
+  "item.realistic_bakery_products.raw_strawberry_cake": "Gâteau aux Fraises Cru",
+
+  "item.realistic_bakery_products.melon_pie": "Tarte à la Pastèque",
+  "item.realistic_bakery_products.berries_pie": "Tarte aux Baies",
+  "item.realistic_bakery_products.honey_pie": "Tarte au Miel",
+
+  "item.realistic_bakery_products.cream": "Glaçage",
+  "item.realistic_bakery_products.chocolate_cream": "Glaçage au Chocolat",
+  "item.realistic_bakery_products.strawberry_cream": "Glaçage à la Fraise",
+ 
+  "item.realistic_bakery_products.honey_cream": "Glaçage au Miel",
+
+  "item.realistic_bakery_products.strawberry_donut": "Donut à la Fraise",
+  "item.realistic_bakery_products.chocolate_donut": "Donut au Chocolat",
+  "item.realistic_bakery_products.honey_donut": "Donut au Miel",
+  "item.realistic_bakery_products.cream_donut": "Donut Glacé",
+  "item.realistic_bakery_products.coked_donut": "Donut Cuit",
+
+  "item.realistic_bakery_products.raw_strawberry_donut": "Donut à la Fraise Cru",
+  "item.realistic_bakery_products.raw_chocolate_donut": "Donut au Chocolat Cru",
+  "item.realistic_bakery_products.raw_honey_donut": "Donut au Miel Cru",
+  "item.realistic_bakery_products.raw_cream_donut": "Donut Glacé Cru",
+  "item.realistic_bakery_products.raw_donut": "Donut Cru",
+
+  "block.realistic_bakery_products.chocolate_cake": "Gâteau au Chocolat",
+  "block.realistic_bakery_products.honey_cake": "Gâteau au Miel",
+  "block.realistic_bakery_products.strawberry_cake": "Gâteau aux Fraises",
+
+  "item.realistic_bakery_products.strawberry": "Fraise",
+  "block.realistic_bakery_products.strawberrybush": "Fraisier",
+
+  "item.realistic_bakery_products.carrot_pie": "Tarte aux Carottes",
+  "item.realistic_bakery_products.raw_carrot_pie": "Tarte aux Carottes Crue",
+  "item.realistic_bakery_products.raw_honey_shortcake": "Sablé au Miel Cru",
+
+  "item.realistic_bakery_products.pumpkin_slice": "Tranche de Citrouille",
+
+  "item.realistic_bakery_products.chocolate_cookie": "Cookie au Chocolat",
+  "item.realistic_bakery_products.raw_chocolate_cookie": "Cookie au Chocolat Cru",
+  "item.realistic_bakery_products.crumbs_cookie": "Miettes de Cookie",
+  "item.realistic_bakery_products.bun": "Pâton",
+  "item.realistic_bakery_products.raw_strawberry_pie": "Tarte aux Fraises Crue",
+  "item.realistic_bakery_products.strawberry_pie": "Tarte aux Fraises",
+  "item.realistic_bakery_products.chocolate_dough": "Pâte Chocolatée",  
+
+  "item.realistic_bakery_products.strawberry_seed": "Graines de Fraises",
+  "item.realistic_bakery_products.strawberry_hay": "Paille pour Fraisier",
+  "item.realistic_bakery_products.strawberry_big": "Grosse Fraise",
+  
+  //NEW
+
+  //Block
+  "block.realistic_bakery_products.strawberrybush_hay": "Paille de Fraisiers",
+  "block.realistic_bakery_products.raw_cake": "Gâteau Cru",
+  "block.realistic_bakery_products.raw_chocolate_cake": "Gâteau au Chocolat Cru",
+  "block.realistic_bakery_products.raw_strawberry_cake": "Gâteau aux Fraises Cru",
+  "block.realistic_bakery_products.raw_honey_cake": "Gâteau au Miel Cru",
+  "block.realistic_bakery_products.cheese_block": "Morceau de Fromage",
+  "block.realistic_bakery_products.pizza": "Pizza",
+  "block.realistic_bakery_products.raw_pizza": "Pizza Crue",
+
+  //Item
+  "item.realistic_bakery_products.cheese_slice": "Tranche de Fromage"
+}
