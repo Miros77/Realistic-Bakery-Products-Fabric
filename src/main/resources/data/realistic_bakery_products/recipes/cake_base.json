@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#",
+        "M",
+        "#"
+    ],
+    "key": {
+        "#": {
+            "item": "realistic_bakery_products:raw_chocolate_shortcake"
+        },
+        "M": {
+            "item": "realistic_bakery_products:chocolate_cream"
+        }
+    },
+    "result": {
+        "item": "realistic_bakery_products:cake_base",
+        "count": 1
+    }
+}

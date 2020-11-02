@@ -3,7 +3,7 @@
     "pattern": [
         " # ",
         "YAB",
-        "EEE"
+        " E "
     ],
     "key": {
         "#": {
@@ -19,7 +19,7 @@
             "item": "minecraft:brown_mushroom"
         },
         "E": {
-            "item": "realistic_bakery_products:dough"
+            "item": "realistic_bakery_products:raw_flatbread"
         }
     },
     "result": {

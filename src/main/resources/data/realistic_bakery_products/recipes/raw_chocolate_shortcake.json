@@ -5,11 +5,11 @@
     ],
     "key": {
         "#": {
-            "item": "realistic_bakery_products:honey_dough"
+            "item": "realistic_bakery_products:chocolate_dough"
         }
     },
     "result": {
-        "item": "realistic_bakery_products:raw_honey_shortcake",
+        "item": "realistic_bakery_products:raw_chocolate_shortcake",
         "count": 1
     }
 }

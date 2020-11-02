@@ -2,18 +2,21 @@
     "type": "minecraft:crafting_shaped",
     "pattern": [
         " # ",
-        "SSS",
-        "RRR"
+        "MMM",
+        "WTW"
     ],
     "key": {
         "#": {
             "item": "minecraft:sweet_berries"
         },
-        "S": {
+        "M": {
             "item": "realistic_bakery_products:cream"
         },
-        "R": {
+        "W": {
             "item": "realistic_bakery_products:dough"
+        },
+        "T": {
+            "item": "realistic_bakery_products:cake_base"
         }
     },
     "result": {

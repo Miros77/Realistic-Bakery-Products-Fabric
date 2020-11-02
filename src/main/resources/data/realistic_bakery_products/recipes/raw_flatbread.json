@@ -1,15 +1,15 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "###"
+        "##"
     ],
     "key": {
         "#": {
-            "item": "realistic_bakery_products:honey_dough"
+            "item": "realistic_bakery_products:dough"
         }
     },
     "result": {
-        "item": "realistic_bakery_products:raw_honey_shortcake",
+        "item": "realistic_bakery_products:raw_flatbread",
         "count": 1
     }
 }
