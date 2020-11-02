@@ -6,13 +6,13 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "realistic_bakery_products:chocolate_cake"
+          "name": "realistic_bakery_products:raw_strawberry_cake"
         }
       ],
       "conditions": [
         {
           "condition": "minecraft:block_state_property",
-          "block": "realistic_bakery_products:chocolate_cake",
+          "block": "realistic_bakery_products:raw_strawberry_cake",
           "properties": {
             "bites": "0"
           }

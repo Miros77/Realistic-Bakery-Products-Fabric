@@ -6,13 +6,13 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "realistic_bakery_products:chocolate_cake"
+          "name": "realistic_bakery_products:new_bread"
         }
       ],
       "conditions": [
         {
           "condition": "minecraft:block_state_property",
-          "block": "realistic_bakery_products:chocolate_cake",
+          "block": "realistic_bakery_products:bread_block",
           "properties": {
             "bites": "0"
           }
