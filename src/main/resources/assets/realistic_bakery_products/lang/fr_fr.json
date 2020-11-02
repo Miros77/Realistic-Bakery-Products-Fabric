@@ -62,9 +62,6 @@
   "item.realistic_bakery_products.strawberry_hay": "Paille pour Fraisier",
   "item.realistic_bakery_products.strawberry_big": "Grosse Fraise",
   
-  //NEW
-
-  //Block
   "block.realistic_bakery_products.strawberrybush_hay": "Paille de Fraisiers",
   "block.realistic_bakery_products.raw_cake": "Gâteau Cru",
   "block.realistic_bakery_products.raw_chocolate_cake": "Gâteau au Chocolat Cru",
@@ -74,6 +71,25 @@
   "block.realistic_bakery_products.pizza": "Pizza",
   "block.realistic_bakery_products.raw_pizza": "Pizza Crue",
 
-  //Item
-  "item.realistic_bakery_products.cheese_slice": "Tranche de Fromage"
+  "item.realistic_bakery_products.cheese_slice": "Tranche de Fromage",
+
+     //NEW   
+//Item
+"item.realistic_bakery_products.bread_slice": "Tranche de Pain",
+"item.realistic_bakery_products.golden_knife": "Couteau en Or",
+"item.realistic_bakery_products.golden_spoon": "Cuillière en Or",
+"item.realistic_bakery_products.iron_knife": "Couteau en Fer",
+"item.realistic_bakery_products.iron_spoon": "Cuillère en Fer",
+"item.realistic_bakery_products.cake_base": "Base de Gâteau",
+"item.realistic_bakery_products.raw_chocolate_shortcake": "Biscuit au Chocolat Cru",
+"item.realistic_bakery_products.raw_bread_slice": "Tranche de Pain Crue",
+"item.realistic_bakery_products.honey_dough": "Pâte au Miel",
+"item.realistic_bakery_products.raw_flatbread": "Pâte à Pizza Crue",
+"item.realistic_bakery_products.raw_new_bread": "Miche de Pain Crue",
+"item.realistic_bakery_products.new_bread": "Miche de Pain",
+"item.realistic_bakery_products.raw_cheese_flatbread": "Pâte à Pizza au Fromage Crue",
+"item.realistic_bakery_products.cheese_flatbread": "Pâte à Pizza au Fromage",
+//Block
+"item.realistic_bakery_products.raw_bread_block": "Pain Cru",
+"item.realistic_bakery_products.bread_block": "Pain"
 }

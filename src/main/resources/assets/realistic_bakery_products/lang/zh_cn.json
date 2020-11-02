@@ -61,18 +61,35 @@
   "item.realistic_bakery_products.strawberry_hay": "草莓干草",
   "item.realistic_bakery_products.strawberry_big": "大草莓",
 
-  //NEW
+  "block.realistic_bakery_products.strawberrybush_hay": "草莓丛干草",
+  "block.realistic_bakery_products.raw_cake": "生蛋糕",
+  "block.realistic_bakery_products.raw_chocolate_cake": "生巧克力蛋糕",
+  "block.realistic_bakery_products.raw_strawberry_cake": "生草莓蛋糕",
+  "block.realistic_bakery_products.raw_honey_cake": "生蜂蜜蛋糕",
+  "block.realistic_bakery_products.cheese_block": "芝士块",
 
-  //Block
-  "block.realistic_bakery_products.strawberrybush_hay": "Strawberrybush Hay",
-  "block.realistic_bakery_products.raw_cake": "Raw Cake",
-  "block.realistic_bakery_products.raw_chocolate_cake": "Raw Chocolate Cake",
-  "block.realistic_bakery_products.raw_strawberry_cake": "Raw Strawberry Cake",
-  "block.realistic_bakery_products.raw_honey_cake": "Raw Honey Cake",
-  "block.realistic_bakery_products.cheese_block": "Cheese Block",
-  "block.realistic_bakery_products.pizza": "Pizza",
-  "block.realistic_bakery_products.raw_pizza": "Raw Pizza",
+  "item.realistic_bakery_products.pizza": "披萨",
+  "item.realistic_bakery_products.raw_pizza": "生披萨",
+  "item.realistic_bakery_products.cheese_slice": "芝士片",
 
-  //Item
-  "item.realistic_bakery_products.cheese_slice": "Cheese Slice"
+     //NEW   
+   //Item
+   "item.realistic_bakery_products.bread_slice": "面包片",
+   "item.realistic_bakery_products.golden_knife": "金制小刀",
+   "item.realistic_bakery_products.golden_spoon": "金勺",
+   "item.realistic_bakery_products.iron_knife": "铁制小刀",
+   "item.realistic_bakery_products.iron_spoon": "铁勺",
+   "item.realistic_bakery_products.cake_base": "蛋糕底座",
+   "item.realistic_bakery_products.raw_chocolate_shortcake": "生巧克力脆饼",
+   "item.realistic_bakery_products.raw_bread_slice": "生面包片",
+   "item.realistic_bakery_products.honey_dough": "蜂蜜面团",
+   "item.realistic_bakery_products.raw_flatbread": "生面饼",
+   "item.realistic_bakery_products.raw_new_bread": "生大块面包",
+   "item.realistic_bakery_products.new_bread": "大块面包",
+   "item.realistic_bakery_products.raw_cheese_flatbread": "生芝士面饼",
+   "item.realistic_bakery_products.cheese_flatbread": "芝士面饼",
+   
+   //Block
+   "item.realistic_bakery_products.raw_bread_block": "生面包",
+   "item.realistic_bakery_products.bread_block": "面包"
 }

@@ -62,9 +62,6 @@
    "item.realistic_bakery_products.strawberry_hay": "Семена Клубники с Сеном",
    "item.realistic_bakery_products.strawberry_big": "Большая Клубника",
 
-     //Новые
-
-   //Блоки
    "block.realistic_bakery_products.strawberrybush_hay": "Клубника с Сеном",
    "block.realistic_bakery_products.raw_cake": "Сырой Торт",
    "block.realistic_bakery_products.raw_chocolate_cake": "Сырой Шоколадный Торт",
@@ -74,6 +71,26 @@
    "block.realistic_bakery_products.pizza": "Пицца",
    "block.realistic_bakery_products.raw_pizza": "Сырая Пицца",
  
-   //Предметы
-   "item.realistic_bakery_products.cheese_slice": "Ломтик Сыра"
+   "item.realistic_bakery_products.cheese_slice": "Ломтик Сыра",
+
+   //Новые   
+  //Предметы
+  "item.realistic_bakery_products.bread_slice": "Кусок Хлеба",
+  "item.realistic_bakery_products.golden_knife": "Золотой Нож",
+  "item.realistic_bakery_products.golden_spoon": "Золотая Ложка",
+  "item.realistic_bakery_products.iron_knife": "Железный Нож",
+  "item.realistic_bakery_products.iron_spoon": "Железная Ложка",
+  "item.realistic_bakery_products.cake_base": "Базовый Торт",
+  "item.realistic_bakery_products.raw_chocolate_shortcake": "Сырой Шоколадный Корж",
+  "item.realistic_bakery_products.raw_bread_slice": "Сырой Кусок Хлеба",
+  "item.realistic_bakery_products.honey_dough": "Медовое Тесто",
+  "item.realistic_bakery_products.raw_flatbread": "Сырая Лепёшка",
+  "item.realistic_bakery_products.raw_new_bread": "Сырой Большой Хлеб",
+  "item.realistic_bakery_products.new_bread": "Большой Хлеб",
+  "item.realistic_bakery_products.raw_cheese_flatbread": "Сырая Сырная Лепёшка",
+  "item.realistic_bakery_products.cheese_flatbread": "Сырная Лепёшка",
+
+  //Блоки
+  "item.realistic_bakery_products.raw_bread_block": "Сырой Хлеб", 
+  "item.realistic_bakery_products.bread_block": "Хлеб" 
 }

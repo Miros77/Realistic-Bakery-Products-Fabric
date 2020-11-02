@@ -61,10 +61,8 @@
   "item.realistic_bakery_products.strawberry_seed": "Strawberry Seed",
   "item.realistic_bakery_products.strawberry_hay": "Strawberry Hay",
   "item.realistic_bakery_products.strawberry_big": "Strawberry Big",
-  
-  //NEW
 
-  //Block
+
   "block.realistic_bakery_products.strawberrybush_hay": "Strawberrybush Hay",
   "block.realistic_bakery_products.raw_cake": "Raw Cake",
   "block.realistic_bakery_products.raw_chocolate_cake": "Raw Chocolate Cake",
@@ -73,7 +71,27 @@
   "block.realistic_bakery_products.cheese_block": "Cheese Block",
   "block.realistic_bakery_products.pizza": "Pizza",
   "block.realistic_bakery_products.raw_pizza": "Raw Pizza",
+  "item.realistic_bakery_products.cheese_slice": "Cheese Slice",
 
-  //Item
-  "item.realistic_bakery_products.cheese_slice": "Cheese Slice"
+ //NEW   
+  //Item  
+  "item.realistic_bakery_products.bread_slice": "Bread Slice",
+  "item.realistic_bakery_products.golden_knife": "Golden Knife",
+  "item.realistic_bakery_products.golden_spoon": "Golden Spoon",
+  "item.realistic_bakery_products.iron_knife": "Iron Knife",
+  "item.realistic_bakery_products.iron_spoon": "Iron Spoon",
+  "item.realistic_bakery_products.cake_base": "Cake Base",
+  "item.realistic_bakery_products.raw_chocolate_shortcake": "Raw Chocolate Shortcake",
+  "item.realistic_bakery_products.raw_bread_slice": "Raw Bread Slice",
+  "item.realistic_bakery_products.honey_dough": "Honey Dough",
+  "item.realistic_bakery_products.raw_flatbread": "Raw Flatbread",
+  "item.realistic_bakery_products.raw_new_bread": "Raw Big Bread",
+  "item.realistic_bakery_products.new_bread": "Big Bread",
+  "item.realistic_bakery_products.raw_cheese_flatbread": "Raw Cheese Flatbread",
+  "item.realistic_bakery_products.cheese_flatbread": "Cheese Flatbread",
+
+  //Block
+  "item.realistic_bakery_products.raw_bread_block": "Raw Bread", 
+  "item.realistic_bakery_products.bread_block": "Bread" 
+
 }
