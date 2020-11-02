@@ -4,10 +4,7 @@
   "version": "${version}",
 
   "name": "Realistic Bakery Products",
-  "description": "Mod will complicate the crafting of bakery products
-  
-  fixed dark texture on versions 1 16 2/1 16 3.
-  ",
+  "description": "Mod will complicate the crafting of bakery products",
   "authors": [
     "Miros77"
   ],
@@ -20,16 +17,15 @@
   "icon": "assets/realistic_bakery_products/icon.png",
 
   "environment": "*",
-"entrypoints": {
+  "entrypoints": {
     "main": [
-      "com.miros77.rbp.Tutorial"
+      "rbp.RBP"
     ],
     "client": [
-      "com.miros77.rbp.RBPclient"
+      "rbp.RBPclient"
     ]
-},
-  "mixins": [
-  ],
+  },
+  "mixins": [],
 
   "depends": {
     "fabricloader": ">=0.7.4",
