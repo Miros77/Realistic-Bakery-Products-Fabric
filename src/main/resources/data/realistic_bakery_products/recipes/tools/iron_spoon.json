@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "  g",
+        " G ",
+        "G  "
+    ],
+    "key": {
+        "g": {
+            "item": "minecraft:iron_ingot"
+        },
+        "G": {
+            "item": "minecraft:iron_nugget"
+        }
+    },
+    "result": {
+        "item": "realistic_bakery_products:iron_spoon",
+        "count": 1
+    }
+}

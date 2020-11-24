@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "MMM",
+        "WTW"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:sweet_berries"
+        },
+        "M": {
+            "item": "realistic_bakery_products:cream"
+        },
+        "W": {
+            "item": "realistic_bakery_products:dough"
+        },
+        "T": {
+            "item": "realistic_bakery_products:cake_base"
+        }
+    },
+    "result": {
+        "item": "realistic_bakery_products:raw_cake",
+        "count": 1
+    }
+}
