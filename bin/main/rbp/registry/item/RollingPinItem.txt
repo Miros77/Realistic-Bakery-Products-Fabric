@@ -1,0 +1,11 @@
+//package rbp.registry.item;
+//
+//import net.minecraft.item.Item;
+//import rbp.ItemExtension;
+//public class RollingPinItem extends Item {
+//
+//	public RollingPinItem(Item.Settings settings) {
+//		super(settings);
+//		((ItemExtension) this).setRecipeRemainder(this);
+//	}
+//}

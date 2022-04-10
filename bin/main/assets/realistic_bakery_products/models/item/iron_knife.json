@@ -1,0 +1,40 @@
+{
+	"credit": "Made with Miros77",
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "realistic_bakery_products:items/tools/iron_knife",
+		"particle": "realistic_bakery_products:items/tools/iron_knife"
+	},
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [20.25, -90, 52],
+			"translation": [0, 4.25, 3],
+			"scale": [0.58008, 0.58008, 0.58008]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [35, 90, 293],
+			"translation": [0, 4.25, 3],
+			"scale": [0.58008, 0.58008, 0.58008]
+		},
+		"firstperson_righthand": {
+			"rotation": [17.75, -72.5, 42.5],
+			"translation": [2.75, 1.25, -2]
+		},
+		"firstperson_lefthand": {
+			"rotation": [-11.5, 89, -8],
+			"translation": [0.75, 1.25, -0.25]
+		},
+		"ground": {
+			"translation": [0, 2, 0],
+			"scale": [0.67188, 0.67188, 0.67188]
+		},
+		"head": {
+			"rotation": [-57.5, 90, 0],
+			"translation": [0.25, -4.75, -8.5]
+		},
+		"fixed": {
+			"rotation": [0, -180, 0],
+			"translation": [0, 0, -0.5]
+		}
+	}
+}

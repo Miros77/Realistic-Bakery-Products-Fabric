@@ -1,0 +1,130 @@
+{
+  "itemGroup.realistic_bakery_products.realistic_bakery_products":"Realistic Bakery Products",
+  "item.realistic_bakery_products.raw_bread": "Pain Cru",
+  "item.realistic_bakery_products.raw_cookie": "Cookie Cru",
+  "item.realistic_bakery_products.raw_cake": "Gâteau Cru",
+  "item.realistic_bakery_products.dough": "Pâte",
+  "item.realistic_bakery_products.flour": "Farine",
+
+  "item.realistic_bakery_products.raw_pumpkin_pie": "Tarte à la Citrouille Crue",
+  "item.realistic_bakery_products.raw_melon_pie": "Tarte à la Pastèque Crue",
+  "item.realistic_bakery_products.raw_berries_pie": "Tarte aux Baies Crue",
+  "item.realistic_bakery_products.raw_honey_pie": "Tarte au Miel Crue",
+
+  "item.realistic_bakery_products.raw_honey_cake": "Gâteau au Miel Cru",
+  "item.realistic_bakery_products.raw_chocolate_cake": "Gâteau au Chocolat Cru",
+  "item.realistic_bakery_products.raw_strawberry_cake": "Gâteau aux Fraises Cru",
+
+  "item.realistic_bakery_products.melon_pie": "Tarte à la Pastèque",
+  "item.realistic_bakery_products.berries_pie": "Tarte aux Baies",
+  "item.realistic_bakery_products.honey_pie": "Tarte au Miel",
+
+  "item.realistic_bakery_products.cream": "Glaçage",
+  "item.realistic_bakery_products.chocolate_cream": "Glaçage au Chocolat",
+  "item.realistic_bakery_products.strawberry_cream": "Glaçage à la Fraise",
+ 
+  "item.realistic_bakery_products.honey_cream": "Glaçage au Miel",
+
+  "item.realistic_bakery_products.strawberry_donut": "Donut à la Fraise",
+  "item.realistic_bakery_products.chocolate_donut": "Donut au Chocolat",
+  "item.realistic_bakery_products.honey_donut": "Donut au Miel",
+  "item.realistic_bakery_products.cream_donut": "Donut Glacé",
+  "item.realistic_bakery_products.coked_donut": "Donut Cuit",
+
+  "item.realistic_bakery_products.raw_strawberry_donut": "Donut à la Fraise Cru",
+  "item.realistic_bakery_products.raw_chocolate_donut": "Donut au Chocolat Cru",
+  "item.realistic_bakery_products.raw_honey_donut": "Donut au Miel Cru",
+  "item.realistic_bakery_products.raw_cream_donut": "Donut Glacé Cru",
+  "item.realistic_bakery_products.raw_donut": "Donut Cru",
+
+  "block.realistic_bakery_products.chocolate_cake": "Gâteau au Chocolat",
+  "block.realistic_bakery_products.honey_cake": "Gâteau au Miel",
+  "block.realistic_bakery_products.strawberry_cake": "Gâteau aux Fraises",
+
+  "item.realistic_bakery_products.strawberry": "Fraise",
+  "block.realistic_bakery_products.strawberrybush": "Fraisier",
+
+  "item.realistic_bakery_products.carrot_pie": "Tarte aux Carottes",
+  "item.realistic_bakery_products.raw_carrot_pie": "Tarte aux Carottes Crue",
+  "item.realistic_bakery_products.raw_honey_shortcake": "Sablé au Miel Cru",
+
+  "item.realistic_bakery_products.pumpkin_slice": "Tranche de Citrouille",
+
+  "item.realistic_bakery_products.chocolate_cookie": "Cookie au Chocolat",
+  "item.realistic_bakery_products.raw_chocolate_cookie": "Cookie au Chocolat Cru",
+  "item.realistic_bakery_products.crumbs_cookie": "Miettes de Cookie",
+  "item.realistic_bakery_products.bun": "Pâton",
+  "item.realistic_bakery_products.raw_strawberry_pie": "Tarte aux Fraises Crue",
+  "item.realistic_bakery_products.strawberry_pie": "Tarte aux Fraises",
+  "item.realistic_bakery_products.chocolate_dough": "Pâte Chocolatée",  
+
+  "item.realistic_bakery_products.strawberry_seed": "Graines de Fraises",
+  "item.realistic_bakery_products.strawberry_hay": "Paille pour Fraisier",
+  "item.realistic_bakery_products.strawberry_big": "Grosse Fraise",
+  
+  "block.realistic_bakery_products.strawberrybush_hay": "Paille de Fraisiers",
+  "block.realistic_bakery_products.raw_cake": "Gâteau Cru",
+  "block.realistic_bakery_products.raw_chocolate_cake": "Gâteau au Chocolat Cru",
+  "block.realistic_bakery_products.raw_strawberry_cake": "Gâteau aux Fraises Cru",
+  "block.realistic_bakery_products.raw_honey_cake": "Gâteau au Miel Cru",
+  "block.realistic_bakery_products.cheese_block": "Morceau de Fromage",
+  "block.realistic_bakery_products.pizza": "Pizza",
+  "block.realistic_bakery_products.raw_pizza": "Pizza Crue",
+
+  "item.realistic_bakery_products.cheese_slice": "Tranche de Fromage",
+
+ "item.realistic_bakery_products.bread_slice": "Tranche de Pain",
+ "item.realistic_bakery_products.golden_knife": "Couteau en Or",
+ "item.realistic_bakery_products.golden_spoon": "Cuillière en Or",
+ "item.realistic_bakery_products.iron_knife": "Couteau en Fer",
+ "item.realistic_bakery_products.iron_spoon": "Cuillère en Fer",
+ "item.realistic_bakery_products.cake_base": "Base de Gâteau",
+ "item.realistic_bakery_products.raw_chocolate_shortcake": "Biscuit au Chocolat Cru",
+ "item.realistic_bakery_products.raw_bread_slice": "Tranche de Pain Crue",
+ "item.realistic_bakery_products.honey_dough": "Pâte au Miel",
+ "item.realistic_bakery_products.raw_flatbread": "Pâte à Pizza Crue",
+ 
+//Change
+"item.realistic_bakery_products.raw_new_bread": "Miche de pain cru",
+"item.realistic_bakery_products.new_bread": "Miche de pain",
+ 
+ "item.realistic_bakery_products.raw_cheese_flatbread": "Pâte à Pizza au Fromage Crue",
+ "item.realistic_bakery_products.cheese_flatbread": "Pâte à Pizza au Fromage",
+
+ "item.realistic_bakery_products.raw_bread_block": "Pain Cru",
+ "item.realistic_bakery_products.bread_block": "Pain",
+ 
+//NEW
+//Item
+"item.realistic_bakery_products.raw_sausage": "Saucisse crue",
+"item.realistic_bakery_products.sausage_slice": "Tranche de saucisse",
+"item.realistic_bakery_products.sausage_slice_9": "9 Tranches de saucisse",
+"item.realistic_bakery_products.sausage_slice_15": "15 Tranches de saucisse",
+"item.realistic_bakery_products.brown_mushroom_7": "7 Champignons bruns",
+"sausage_slice_15.realistic_bakery_products.tooltip": "§aIngrédients pour pizza",
+  "item.realistic_bakery_products.chocolate_bun": "Chocolatée Pâton",
+  "item.realistic_bakery_products.honey_bun": "Pâton au Miel",
+"item.realistic_bakery_products.sausage": "Saussice",
+//Block
+"block.realistic_bakery_products.sausage_block": "Saussice",
+
+//1.1.7
+"item.realistic_bakery_products.milk_bun": "Brioche",
+"item.realistic_bakery_products.milk_dough": "Pâte à brioche",
+"item.realistic_bakery_products.cocoa_dust": "Cacao",
+
+  //1.3.0
+"item.realistic_bakery_products.rolling_pin": "Rouleau à pâtisserie",
+"item.realistic_bakery_products.hand_mill": "Moulin à grain manuel",
+"item.realistic_bakery_products.hand_mill_wooden_funnel": "Entonnoir en bois",
+"item.realistic_bakery_products.hand_mill_crank": "Manivelle",
+"item.realistic_bakery_products.hand_mill_millstone": "Meule",
+
+//Tooltip
+"knife.realistic_bakery_products.tooltip": "§aUtiliser un couteau pour couper: Morceau de fromage, Saucisse, Pain, Pain cru",
+"spoon.realistic_bakery_products.tooltip": "§aUtiliser une cuillère pour manger tout les gâteaux à l'exception du Gâteau simple (fonctionne aussi sur les gâteaux crus)",
+
+"bread_slice.realistic_bakery_products.tooltip": "§aPour obtenir une Tranche de pain, interargir sur un Pain avec un Couteau.",
+"raw_bread_slice.realistic_bakery_products.tooltip": "§aPour obtenir une Tranche de pain crue, interargir sur un Pain cru avec un Couteau.",
+"сheese_slice.realistic_bakery_products.tooltip": "§aPour obtenir une Tranche de saucisse, interargir sur une Saucisse avec un Couteau.",
+"sausage_slice.realistic_bakery_products.tooltip": "§aPour obtenir une Tranche de fromage, interargir sur un Morceau de fromage avec un Couteau."}

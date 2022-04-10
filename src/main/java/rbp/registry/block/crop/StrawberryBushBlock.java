@@ -11,6 +11,7 @@ import net.minecraft.block.SweetBerryBushBlock;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import javax.swing.text.html.BlockView;
 import net.minecraft.block.Block;
+//import net.minecraft.block.FlowerPotBlock;
 import net.minecraft.block.BlockState;
 
 //My
@@ -100,6 +101,8 @@ public class StrawberryBushBlock extends SweetBerryBushBlock {
       return super.onUse(state, world, pos, player, hand, hit);
     }
   }
+
+  
 
   @Override
   public void onStacksDropped(BlockState state, World world, BlockPos pos, ItemStack stack) {

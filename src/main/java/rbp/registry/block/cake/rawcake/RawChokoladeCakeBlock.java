@@ -63,7 +63,7 @@ public class RawChokoladeCakeBlock extends CakeBlock {
       } else {
          player.incrementStat(Stats.EAT_CAKE_SLICE);
          player.getHungerManager().add(2, 0.1F);
-         player.applyStatusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 300, 0));
+         player.addStatusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 300, 0));
          int i = (Integer)state.get(BITES);
          if (i < 6) {
             world.setBlockState(pos, (BlockState)state.with(BITES, i + 1), 3);

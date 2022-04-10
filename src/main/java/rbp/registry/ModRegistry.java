@@ -7,17 +7,36 @@ import rbp.RBP;
 import rbp.registry.block.cake.cake.ChokoladeCakeBlock;
 import rbp.registry.block.cake.cake.HoneyCakeBlock;
 import rbp.registry.block.cake.cake.StrawberryCakeBlock;
+
 import rbp.registry.block.cake.custom_cake.Pizza.Pizza;
 import rbp.registry.block.cake.custom_cake.Pizza.RawPizza;
 import rbp.registry.block.cake.custom_cake.bread.BreadBlock;
 import rbp.registry.block.cake.custom_cake.bread.RawBreadBlock;
 import rbp.registry.block.cake.custom_cake.cheese.Cheese;
 import rbp.registry.block.cake.custom_cake.sausage.Sausage;
+
 import rbp.registry.block.cake.rawcake.RawChokoladeCakeBlock;
+import rbp.registry.block.cake.rawcake.RawHoneyCakeBlock;
+import rbp.registry.block.cake.rawcake.RawStrawberryCakeBlock;
+
 import rbp.registry.block.crop.StrawberryBushBlock;
 import rbp.registry.block.crop.StrawberryBushBlockHay;
+
+import rbp.*;
+
+//Tooltip 
 import rbp.registry.item.IngredientsforPizza;
 
+import rbp.registry.item.UseKnife;
+import rbp.registry.item.UseSpoon;
+
+import rbp.registry.item.GetSausageSlice;
+import rbp.registry.item.GetSliceCheese;
+import rbp.registry.item.GetSliceBread;
+import rbp.registry.item.GetSliceRawBread;
+
+//import rbp.registry.item.HandMillItem;
+//import rbp.registry.item.RollingPinItem;
 //Group
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 
@@ -58,8 +77,8 @@ public class ModRegistry {
       	      stacks.add(ItemStack.EMPTY);
       	      stacks.add(ItemStack.EMPTY);
               stacks.add(ItemStack.EMPTY);
-              stacks.add(ItemStack.EMPTY);
               stacks.add(new ItemStack(ModRegistry.FLOUR));
+              stacks.add(new ItemStack(ModRegistry.COCOA_DUST));
               stacks.add(ItemStack.EMPTY);
               stacks.add(ItemStack.EMPTY);
               stacks.add(ItemStack.EMPTY);
@@ -70,8 +89,8 @@ public class ModRegistry {
               stacks.add(ItemStack.EMPTY);
               stacks.add(new ItemStack(ModRegistry.DOUGH));
               stacks.add(new ItemStack(ModRegistry.CHOCOLATE_DOUGH));
-              stacks.add(new ItemStack(ModRegistry.HONEY_DOUGH));
-              stacks.add(ItemStack.EMPTY);
+              stacks.add(new ItemStack(ModRegistry.HONEY_DOUGH));    //MILK_DOUGH//
+              stacks.add(new ItemStack(ModRegistry.MILK_DOUGH));
               stacks.add(ItemStack.EMPTY);
               stacks.add(ItemStack.EMPTY);
 
@@ -81,7 +100,7 @@ public class ModRegistry {
               stacks.add(new ItemStack(ModRegistry.BUN));
               stacks.add(new ItemStack(ModRegistry.CHOCOLATE_BUN));
               stacks.add(new ItemStack(ModRegistry.HONEY_BUN));
-              stacks.add(ItemStack.EMPTY);
+              stacks.add(new ItemStack(ModRegistry.MILK_BUN));
               stacks.add(ItemStack.EMPTY);
               stacks.add(ItemStack.EMPTY);
 
@@ -229,15 +248,34 @@ public class ModRegistry {
               stacks.add(ItemStack.EMPTY); 
               stacks.add(new ItemStack(ModRegistry.IRON_SPOON));
               stacks.add(new ItemStack(ModRegistry.IRON_KNIFE)); 
-              stacks.add(ItemStack.EMPTY);  
+              stacks.add(ItemStack.EMPTY);
               stacks.add(new ItemStack(ModRegistry.GOLDEN_SPOON));
               stacks.add(new ItemStack(ModRegistry.GOLDEN_KNIFE));
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(new ItemStack(ModRegistry.HAND_MILL));  
+              stacks.add(new ItemStack(ModRegistry.HAND_MILL_CRANK)); 
+              stacks.add(new ItemStack(ModRegistry.HAND_MILL_MILLSTONE)); 
+              stacks.add(new ItemStack(ModRegistry.HAND_MILL_WOODEN_FUNNEL)); 
+              stacks.add(new ItemStack(ModRegistry.ROLLING_PIN));  
+              stacks.add(ItemStack.EMPTY); 
   }).build();
 
 //=========================================Make Item, Block=========================================//
-  //RAW//
+  //DUST//
     public static final Item FLOUR = new Item(new Item.Settings()); 
+    public static final Item COCOA_DUST = new Item(new Item.Settings()); 
+    
 
+    //Slice
+    public static final GetSliceRawBread RAW_BREAD_SLICE = new GetSliceRawBread(new Item.Settings().food(new FoodComponent.Builder().hunger(1).saturationModifier(0.1f).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 300, 0), 0.3F).build()));
+    public static final GetSliceBread BREAD_SLICE = new GetSliceBread(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.6f).build()));
+    public static final GetSliceCheese CHEESE_SLICE = new GetSliceCheese(new Item.Settings().food(new FoodComponent.Builder().hunger(5).saturationModifier(0.5f).build()));
+    public static final GetSausageSlice SAUSAGE_SLICE = new GetSausageSlice(new Item.Settings().food(new FoodComponent.Builder().hunger(6).saturationModifier(0.5f).build()));
+    
     //PLANTS
     public static final Item PUMPKIN_SLICE = new Item(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(5).saturationModifier(0.5f).build()));
     public static final Item STRAWBERRY = new Item(new Item.Settings().food(new FoodComponent.Builder().hunger(1).saturationModifier(0.2f).build()));   
@@ -249,9 +287,10 @@ public class ModRegistry {
 
     //DOUGH
     public static final Item DOUGH = new Item(new Item.Settings().food(new FoodComponent.Builder().hunger(1).saturationModifier(0.1f).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 300, 0), 0.3F).statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 300, 0), 0.3F).build()));
-    public static final Item CHOCOLATE_DOUGH = new Item(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 300, 0), 0.3F).statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 300, 0), 0.3F).build()));
-    public static final Item HONEY_DOUGH = new Item(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.2f).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 300, 0), 0.3F).statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 300, 0), 0.3F).build()));
-    
+    public static final Item CHOCOLATE_DOUGH = new Item(new Item.Settings().food(new FoodComponent.Builder().hunger(3).saturationModifier(0.1f).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 300, 0), 0.3F).statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 300, 0), 0.3F).build()));
+    public static final Item HONEY_DOUGH = new Item(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.5f).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 300, 0), 0.3F).statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 300, 0), 0.3F).build()));
+    public static final Item MILK_DOUGH = new Item(new Item.Settings().food(new FoodComponent.Builder().hunger(3).saturationModifier(0.4f).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 300, 0), 0.3F).statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 300, 0), 0.3F).build()));
+
     //SHORTCAKE
     public static final Item RAW_HONEY_SHORTCAKE = new Item(new Item.Settings().food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 300, 0), 0.3F).build()));
     public static final Item RAW_CHOCOLATE_SHORTCAKE = new Item(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.2f).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 300, 0), 0.3F).build()));
@@ -259,7 +298,7 @@ public class ModRegistry {
     
     //RAW_BREAD
     public static Block RAW_BREADBLOCK = new RawBreadBlock();
-    public static final Item RAW_BREAD_SLICE = new Item(new Item.Settings().food(new FoodComponent.Builder().hunger(1).saturationModifier(0.1f).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 300, 0), 0.3F).build()));
+
     
     //RAW_COOKIE
     public static final Item RAW_COOKIE = new Item(new Item.Settings().food(new FoodComponent.Builder().hunger(1).saturationModifier(0.1f).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 300, 0), 0.3F).build()));
@@ -287,9 +326,9 @@ public class ModRegistry {
     
     //RAW CAKE
     public static Block RAW_CAKE = new RawChokoladeCakeBlock();
-    public static Block RAW_STRAWBERRY_CAKE = new RawChokoladeCakeBlock();
+    public static Block RAW_STRAWBERRY_CAKE = new RawStrawberryCakeBlock();
     public static Block RAW_CHOCOLATE_CAKE = new RawChokoladeCakeBlock();
-    public static Block RAW_HONEY_CAKE = new RawChokoladeCakeBlock();
+    public static Block RAW_HONEY_CAKE = new RawHoneyCakeBlock();
     public static Block RAW_Pizza = new RawPizza();
     
     //FLATBREAD
@@ -301,10 +340,11 @@ public class ModRegistry {
     public static final Item BUN = new Item(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.2f).build()));
     public static final Item CHOCOLATE_BUN = new Item(new Item.Settings().food(new FoodComponent.Builder().hunger(4).saturationModifier(0.4f).build()));
     public static final Item HONEY_BUN = new Item(new Item.Settings().food(new FoodComponent.Builder().hunger(5).saturationModifier(0.6f).build()));
+    public static final Item MILK_BUN = new Item(new Item.Settings().food(new FoodComponent.Builder().hunger(5).saturationModifier(0.5f).build()));
 
     //BREADS
     public static Block BREADBLOCK = new BreadBlock();
-    public static final Item BREAD_SLICE = new Item(new Item.Settings().food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).build()));
+    //public static final Item BREAD_SLICE = new Item(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.6f).build()));
     
     //Cookie
     public static final Item CHOCOLATE_COOKIE = new Item(new Item.Settings().food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).build()));
@@ -332,10 +372,8 @@ public class ModRegistry {
     
     //CHEESE
     public static Block CHEESE_BLOCK = new Cheese();
-    public static final Item CHEESE_SLICE = new Item(new Item.Settings().food(new FoodComponent.Builder().hunger(5).saturationModifier(0.5f).build()));
     
     //Meat
-    public static final Item SAUSAGE_SLICE = new Item(new Item.Settings().food(new FoodComponent.Builder().hunger(6).saturationModifier(0.5f).build()));
     public static final Item RAW_SAUSAGE = new Item(new Item.Settings().food(new FoodComponent.Builder().hunger(5).saturationModifier(0.3f).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 300, 0), 0.3F).statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 300, 0), 0.3F).build()));
     public static Block SAUSAGE_BLOCK = new Sausage();
 
@@ -354,36 +392,34 @@ public class ModRegistry {
 
    //Tools
     //Iron  
-    public static final Item GOLDEN_SPOON = new Item(new Item.Settings().recipeRemainder(ModRegistry.GOLDEN_SPOON).maxCount(1)); 
-    public static final Item GOLDEN_KNIFE = new Item(new Item.Settings().recipeRemainder(ModRegistry.GOLDEN_KNIFE).maxCount(1));   
+    public static final UseSpoon GOLDEN_SPOON = new UseSpoon(new Item.Settings().recipeRemainder(ModRegistry.GOLDEN_SPOON).maxCount(1)); 
+    public static final UseKnife GOLDEN_KNIFE = new UseKnife(new Item.Settings().recipeRemainder(ModRegistry.GOLDEN_KNIFE).maxCount(1));   
     //Gold
-    public static final Item IRON_KNIFE = new Item(new Item.Settings().recipeRemainder(ModRegistry.IRON_KNIFE).maxCount(1)); 
-    public static final Item IRON_SPOON = new Item(new Item.Settings().recipeRemainder(ModRegistry.IRON_SPOON).maxCount(1)); 
+    public static final UseKnife IRON_KNIFE = new UseKnife(new Item.Settings().recipeRemainder(ModRegistry.IRON_KNIFE).maxCount(1)); 
+    public static final UseSpoon IRON_SPOON = new UseSpoon(new Item.Settings().recipeRemainder(ModRegistry.IRON_SPOON).maxCount(1)); 
 
-//[DELETED]
-    //public static final Item RAW_BREAD = new Item(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 300, 0), 0.3F).build()));
-    //public static final Item ROLLING_PIN_1 = new Item(new Item.Settings().recipeRemainder(ModRegistry.ROLLING_PIN_2).maxCount(1)); 
-    //public static final Item ROLLING_PIN_2 = new Item(new Item.Settings().recipeRemainder(ModRegistry.ROLLING_PIN_1).maxCount(1)); 
-
-    //public static final Item STRAWBERRY = new Item(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(3).saturationModifier(2f).build()));
-    
-
-//[NOT REALISED]
-    //public static Block FREEZER = new Freezer(Block.Settings.copy(Blocks.FURNACE));
-    
+    public static final KitchenAppliance ROLLING_PIN = new KitchenAppliance(new Item.Settings().maxCount(1)); 
+    //HAND_MILL parts
+    public static final KitchenAppliance HAND_MILL = new KitchenAppliance(new Item.Settings().maxCount(1));  
+    public static final Item HAND_MILL_WOODEN_FUNNEL = new Item(new Item.Settings().maxCount(1)); 
+    public static final Item HAND_MILL_CRANK = new Item(new Item.Settings().maxCount(1)); 
+    public static final Item HAND_MILL_MILLSTONE = new Item(new Item.Settings().maxCount(1)); 
 
 //=========================================Register: Items and Block=========================================//
     public static void registerItems() {
         //==============================Item======================================//
         Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "flour"), FLOUR);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "cocoa_dust"), COCOA_DUST);
 
         Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "dough"), DOUGH);
         Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "chocolate_dough"), CHOCOLATE_DOUGH);
         Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "honey_dough"), HONEY_DOUGH);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "milk_dough"), MILK_DOUGH);
 
         Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "bun"), BUN);
         Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "chocolate_bun"), CHOCOLATE_BUN);
         Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "honey_bun"), HONEY_BUN);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "milk_bun"), MILK_BUN);
 
         //Plants
         Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "pumpkin_slice"), PUMPKIN_SLICE);
@@ -492,6 +528,11 @@ public class ModRegistry {
         Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "golden_knife"), GOLDEN_KNIFE);   
         Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "golden_spoon"), GOLDEN_SPOON);  
 
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "hand_mill"), HAND_MILL);  
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "hand_mill_wooden_funnel"), HAND_MILL_WOODEN_FUNNEL);  
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "hand_mill_crank"), HAND_MILL_CRANK);  
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "hand_mill_millstone"), HAND_MILL_MILLSTONE);  
+
         //==============================Block======================================//
 
         //Crop
@@ -518,8 +559,9 @@ public class ModRegistry {
 
         //[Deleted]
            //Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "raw_bread"), RAW_BREAD);
-           //Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "rolling_pin_1"), ROLLING_PIN_1);   
-           //Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "rolling_pin_2"), ROLLING_PIN_2);  
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "rolling_pin"), ROLLING_PIN);      
+        //Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "glass_bowl"), GLASS_BOWL);   
+
 
     }
 }

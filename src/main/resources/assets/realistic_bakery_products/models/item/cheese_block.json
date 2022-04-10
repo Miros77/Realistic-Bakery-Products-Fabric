@@ -1,0 +1,28 @@
+{
+	"credit": "Made with Miros77",
+	"parent": "block/block",
+	"textures": {
+		"4": "realistic_bakery_products:block/cheese/cheese_inner"
+	},
+	"elements": [
+		{
+			"from": [1, 0, 1],
+			"to": [15, 8, 15],
+			"faces": {
+				"north": {"uv": [1, 8, 15, 16], "texture": "#4"},
+				"east": {"uv": [1, 8, 15, 16], "texture": "#4"},
+				"south": {"uv": [1, 8, 15, 16], "texture": "#4"},
+				"west": {"uv": [1, 8, 15, 16], "texture": "#4"},
+				"up": {"uv": [1, 2, 15, 16], "texture": "#4"},
+				"down": {"uv": [1, 2, 15, 16], "rotation": 90, "texture": "#4", "cullface": "down"}
+			}
+		}
+	],
+	"display": {
+		"gui": {
+			"rotation": [26, 45, 0],
+			"translation": [0, 1, 4],
+			"scale": [0.71875, 0.71875, 0.71875]
+		}
+	}
+}

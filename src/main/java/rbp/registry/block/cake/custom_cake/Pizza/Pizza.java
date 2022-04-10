@@ -47,10 +47,10 @@ import net.minecraft.world.WorldView;
 
 public class Pizza extends CakeBlock {
 
-	public Pizza() {
+   public Pizza() {
       super(FabricBlockSettings.of(Material.CAKE).ticksRandomly().sounds(BlockSoundGroup.WOOL).nonOpaque());
       this.setDefaultState((BlockState)((BlockState)this.stateManager.getDefaultState()).with(BITES, 0));
-	}
+   }
    
    public static final IntProperty BITES;
    protected static final VoxelShape[] BITES_TO_SHAPE;
@@ -121,15 +121,13 @@ public class Pizza extends CakeBlock {
    static {
       BITES = Properties.BITES;
       BITES_TO_SHAPE = new VoxelShape[]{
-         Block.createCuboidShape(1.0D, 0.0D, 1.0D, 15.0D, 1.0D, 15.0D), 
-         Block.createCuboidShape(3.0D, 0.0D, 1.0D, 15.0D, 1.0D, 15.0D), 
-         Block.createCuboidShape(5.0D, 0.0D, 1.0D, 15.0D, 1.0D, 15.0D), 
-         Block.createCuboidShape(7.0D, 0.0D, 1.0D, 15.0D, 1.0D, 15.0D), 
-         Block.createCuboidShape(9.0D, 0.0D, 1.0D, 15.0D, 1.0D, 15.0D), 
-         Block.createCuboidShape(11.0D, 0.0D, 1.0D, 15.0D, 1.0D, 15.0D), 
-         Block.createCuboidShape(13.0D, 0.0D, 1.0D, 15.0D, 1.0D, 15.0D)};
+         Block.createCuboidShape(1.0D, 0.0D, 1.0D, 15.0D, 0.6D, 15.0D), 
+         Block.createCuboidShape(3.0D, 0.0D, 1.0D, 15.0D, 0.6D, 15.0D), 
+         Block.createCuboidShape(5.0D, 0.0D, 1.0D, 15.0D, 0.6D, 15.0D), 
+         Block.createCuboidShape(7.0D, 0.0D, 1.0D, 15.0D, 0.6D, 15.0D), 
+         Block.createCuboidShape(9.0D, 0.0D, 1.0D, 15.0D, 0.6D, 15.0D), 
+         Block.createCuboidShape(11.0D, 0.0D, 1.0D, 15.0D, 0.6D, 15.0D), 
+         Block.createCuboidShape(13.0D, 0.0D, 1.0D, 15.0D, 0.6D, 15.0D)};
    }
    
 }
-
-  

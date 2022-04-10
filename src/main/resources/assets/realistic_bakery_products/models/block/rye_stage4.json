@@ -1,0 +1,7 @@
+{
+	"credit": "Made with Miros77",
+	"parent": "minecraft:block/crop",
+	"textures": {
+		"crop": "realistic_bakery_products:block/crop/rye/rye_stage4"
+	}
+}

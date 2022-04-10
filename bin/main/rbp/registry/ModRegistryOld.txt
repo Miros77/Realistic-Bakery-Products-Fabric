@@ -1,0 +1,354 @@
+package rbp.registry;
+
+//=========================================Imports=========================================//
+
+//Rbp
+import rbp.RBP;
+import rbp.registry.block.cake.cake.ChokoladeCakeBlock;
+import rbp.registry.block.cake.cake.HoneyCakeBlock;
+import rbp.registry.block.cake.cake.StrawberryCakeBlock;
+import rbp.registry.block.cake.custom_cake.Pizza.Pizza;
+import rbp.registry.block.cake.custom_cake.Pizza.RawPizza;
+import rbp.registry.block.cake.custom_cake.bread.BreadBlock;
+import rbp.registry.block.cake.custom_cake.bread.RawBreadBlock;
+import rbp.registry.block.cake.custom_cake.cheese.Cheese;
+import rbp.registry.block.cake.custom_cake.sausage.Sausage;
+import rbp.registry.block.cake.rawcake.RawChokoladeCakeBlock;
+import rbp.registry.block.crop.StrawberryBushBlock;
+import rbp.registry.block.crop.StrawberryBushBlockHay;
+import rbp.registry.item.IngredientsforPizza;
+
+//Group
+import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+
+//Block
+import net.minecraft.block.Block;
+//import net.minecraft.block.Blocks;    
+//import com.miros77.rbp.registry.block.kitchen.Freezer;
+
+//Effect
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.item.AliasedBlockItem;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.FoodComponent;
+
+//Item
+import net.minecraft.item.HoneyBottleItem;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
+//Util
+import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
+
+
+
+public class ModRegistry {
+//=========================================ItemGroup=========================================//
+//public static final ItemGroup REALISTIC_BAKERY_PRODUCTS = FabricItemGroupBuilder.build(
+//	new Identifier("realistic_bakery_products", "realistic_bakery_products"),
+//    () -> new ItemStack(ModRegistry.RAW_BREADBLOCK));      
+
+      public static final ItemGroup REALISTIC_BAKERY_PRODUCTS_NEW = FabricItemGroupBuilder.create(
+        new Identifier("realistic_bakery_products", "realistic_bakery_products"))
+      .icon(() -> new ItemStack(ModRegistry.RAW_BREADBLOCK)).appendItems(stacks -> {
+      	      stacks.add(ItemStack.EMPTY);
+      	      stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(new ItemStack(ModRegistry.FLOUR));
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(new ItemStack(ModRegistry.DOUGH));
+              stacks.add(new ItemStack(ModRegistry.CHOCOLATE_DOUGH));
+              stacks.add(new ItemStack(ModRegistry.HONEY_DOUGH));
+              stacks.add(new ItemStack(ModRegistry.BUN));
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(new ItemStack(ModRegistry.RAW_BREADBLOCK));
+              stacks.add(new ItemStack(ModRegistry.RAW_BREAD_SLICE));
+              stacks.add(new ItemStack(ModRegistry.BREADBLOCK));
+              stacks.add(new ItemStack(ModRegistry.BREAD_SLICE));
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(new ItemStack(ModRegistry.RAW_COOKIE));
+              stacks.add(new ItemStack(Items.COOKIE));
+              stacks.add(new ItemStack(ModRegistry.CRUMBS_COOKIE));
+              stacks.add(new ItemStack(ModRegistry.RAW_CHOCOLATE_COOKIE));
+              stacks.add(new ItemStack(ModRegistry.CHOCOLATE_COOKIE));
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(new ItemStack(ModRegistry.STRAWBERRYBUSH));
+              stacks.add(new ItemStack(ModRegistry.STRAWBERRYBUSH_HAY));
+              stacks.add(new ItemStack(ModRegistry.STRAWBERRY));
+              stacks.add(new ItemStack(ModRegistry.STRAWBERRY_BIG));
+              stacks.add(new ItemStack(ModRegistry.PUMPKIN_SLICE));
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(new ItemStack(ModRegistry.RAW_CHOCOLATE_SHORTCAKE));
+              stacks.add(new ItemStack(ModRegistry.CAKE_BASE));
+              stacks.add(new ItemStack(ModRegistry.RAW_HONEY_SHORTCAKE));
+              stacks.add(new ItemStack(ModRegistry.RAW_DONUT));
+              stacks.add(new ItemStack(ModRegistry.COKED_DONUT));
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);              
+              stacks.add(new ItemStack(ModRegistry.RAW_PUMPKIN_PIE));
+              stacks.add(new ItemStack(ModRegistry.RAW_BERRIES_PIE));
+              stacks.add(new ItemStack(ModRegistry.RAW_CARROT_PIE));
+              stacks.add(new ItemStack(ModRegistry.RAW_HONEY_PIE));
+              stacks.add(new ItemStack(ModRegistry.RAW_MELON_PIE));
+              stacks.add(new ItemStack(ModRegistry.RAW_STRAWBERRY_PIE));
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(new ItemStack(Items.PUMPKIN_PIE));
+              stacks.add(new ItemStack(ModRegistry.BERRIES_PIE));
+              stacks.add(new ItemStack(ModRegistry.CARROT_PIE));
+              stacks.add(new ItemStack(ModRegistry.HONEY_PIE));
+              stacks.add(new ItemStack(ModRegistry.MELON_PIE));
+              stacks.add(new ItemStack(ModRegistry.STRAWBERRY_PIE));
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(new ItemStack(Items.PUMPKIN_PIE));
+              stacks.add(new ItemStack(ModRegistry.BERRIES_PIE));
+              stacks.add(new ItemStack(ModRegistry.CARROT_PIE));
+              stacks.add(new ItemStack(ModRegistry.HONEY_PIE));
+              stacks.add(new ItemStack(ModRegistry.MELON_PIE));
+              stacks.add(new ItemStack(ModRegistry.STRAWBERRY_PIE));
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(new ItemStack(ModRegistry.CREAM));
+              stacks.add(new ItemStack(ModRegistry.RAW_CREAM_DONUT));
+              stacks.add(new ItemStack(ModRegistry.CREAM_DONUT));
+              stacks.add(new ItemStack(ModRegistry.RAW_CAKE));
+              stacks.add(new ItemStack(Items.CAKE));
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);   
+              stacks.add(new ItemStack(ModRegistry.CHOCOLATE_CREAM));
+              stacks.add(new ItemStack(ModRegistry.RAW_CHOCOLATE_DONUT));
+              stacks.add(new ItemStack(ModRegistry.CHOCOLATE_DONUT));
+              stacks.add(new ItemStack(ModRegistry.RAW_CHOCOLATE_CAKE));
+              stacks.add(new ItemStack(ModRegistry.CHOCOLATE_CAKE));
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);   
+              stacks.add(new ItemStack(ModRegistry.STRAWBERRY_CREAM));
+              stacks.add(new ItemStack(ModRegistry.RAW_STRAWBERRY_DONUT));
+              stacks.add(new ItemStack(ModRegistry.STRAWBERRY_DONUT));
+              stacks.add(new ItemStack(ModRegistry.RAW_STRAWBERRY_CAKE));
+              stacks.add(new ItemStack(ModRegistry.STRAWBERRY_CAKE));
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);  
+              stacks.add(new ItemStack(ModRegistry.HONEY_CREAM));
+              stacks.add(new ItemStack(ModRegistry.RAW_HONEY_DONUT));
+              stacks.add(new ItemStack(ModRegistry.HONEY_DONUT));
+              stacks.add(new ItemStack(ModRegistry.RAW_HONEY_CAKE));
+              stacks.add(new ItemStack(ModRegistry.HONEY_CAKE));
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);  
+              stacks.add(new ItemStack(ModRegistry.RAW_FLATBREAD));
+              stacks.add(new ItemStack(ModRegistry.CHEESE_BLOCK));
+              stacks.add(new ItemStack(ModRegistry.CHEESE_SLICE));
+              stacks.add(new ItemStack(ModRegistry.RAW_SAUSAGE));
+              stacks.add(new ItemStack(ModRegistry.SAUSAGE_BLOCK));
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);  
+              stacks.add(new ItemStack(ModRegistry.SAUSAGE_SLICE));
+              stacks.add(new ItemStack(ModRegistry.SAUSAGE_SLICE_9));
+              stacks.add(new ItemStack(ModRegistry.SAUSAGE_SLICE_15));
+              stacks.add(new ItemStack(ModRegistry.BROWN_MUSHROOM_7));
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);  
+              stacks.add(new ItemStack(ModRegistry.RAW_CHEESE_FLATBREAD));
+              stacks.add(new ItemStack(ModRegistry.RAW_Pizza));
+              stacks.add(ItemStack.EMPTY);  
+              stacks.add(new ItemStack(ModRegistry.CHEESE_FLATBREAD));
+              stacks.add(new ItemStack(ModRegistry.Pizza));
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY); 
+              stacks.add(new ItemStack(ModRegistry.IRON_SPOON));
+              stacks.add(new ItemStack(ModRegistry.IRON_KNIFE)); 
+              stacks.add(ItemStack.EMPTY);  
+              stacks.add(new ItemStack(ModRegistry.GOLDEN_SPOON));
+              stacks.add(new ItemStack(ModRegistry.GOLDEN_KNIFE));
+  }).build();
+
+//=========================================Make Item, Block=========================================//
+      //RAW//
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "flour"), FLOUR);
+        //DOUGH
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "dough"), DOUGH);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "chocolate_dough"), CHOCOLATE_DOUGH);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "honey_dough"), HONEY_DOUGH);
+        //Plants
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "pumpkin_slice"), PUMPKIN_SLICE);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "strawberry_seed"), new AliasedBlockItem(STRAWBERRYBUSH, new Item.Settings()));
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "strawberry"), STRAWBERRY);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "strawberry_hay"), new AliasedBlockItem(STRAWBERRYBUSH_HAY, new Item.Settings()));
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "strawberry_big"), STRAWBERRY_BIG);
+
+       //Raw Bakery Products
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "raw_new_bread"), new AliasedBlockItem(RAW_BREADBLOCK, new Item.Settings().maxCount(2)));
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "raw_bread_slice"), RAW_BREAD_SLICE);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "raw_cookie"), RAW_COOKIE);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "crumbs_cookie"), CRUMBS_COOKIE);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "raw_chocolate_cookie"), RAW_CHOCOLATE_COOKIE);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "raw_chocolate_shortcake"), RAW_CHOCOLATE_SHORTCAKE);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "cake_base"), CAKE_BASE);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "raw_honey_shortcake"), RAW_HONEY_SHORTCAKE);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "raw_donut"), RAW_DONUT);
+        
+        //PIE
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "raw_pumpkin_pie"), RAW_PUMPKIN_PIE);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "raw_berries_pie"), RAW_BERRIES_PIE);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "raw_honey_pie"), RAW_HONEY_PIE);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "raw_melon_pie"), RAW_MELON_PIE);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "raw_carrot_pie"), RAW_CARROT_PIE);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "raw_strawberry_pie"), RAW_STRAWBERRY_PIE);
+        
+        //CREAM
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "cream"), CREAM);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "raw_cream_donut"), RAW_CREAM_DONUT);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "raw_cake"), new BlockItem(RAW_CAKE, new Item.Settings().maxCount(1)));
+        
+        //CHOCOLATE
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "chocolate_cream"), CHOCOLATE_CREAM);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "raw_chocolate_donut"), RAW_CHOCOLATE_DONUT);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "raw_chocolate_cake"), new BlockItem(RAW_CHOCOLATE_CAKE, new Item.Settings().maxCount(1)));
+        
+        //STRAWBERRY
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "strawberry_cream"), STRAWBERRY_CREAM);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "raw_strawberry_donut"), RAW_STRAWBERRY_DONUT);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "raw_strawberry_cake"), new BlockItem(RAW_STRAWBERRY_CAKE, new Item.Settings().maxCount(1)));
+        
+        //HONEY
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "honey_cream"), HONEY_CREAM);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "raw_honey_donut"), RAW_HONEY_DONUT);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "raw_honey_cake"), new BlockItem(RAW_HONEY_CAKE, new Item.Settings().maxCount(1)));
+        
+        //CHEESE
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "cheese_block"), new BlockItem(CHEESE_BLOCK, new Item.Settings().maxCount(1)));
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "cheese_slice"), CHEESE_SLICE);
+        
+        //Meat
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "sausage_slice"), SAUSAGE_SLICE); 
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "raw_sausage"), RAW_SAUSAGE); 
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "sausage"), new AliasedBlockItem(SAUSAGE_BLOCK, new Item.Settings().maxCount(1)));
+
+        //Ingredients for Pizza
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "sausage_slice_9"), SAUSAGE_SLICE_9); 
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "sausage_slice_15"), SAUSAGE_SLICE_15); 
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "brown_mushroom_7"), BROWN_MUSHROOM_7);
+        //Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "beetroot_slice_4"), BEETROOT_SLICE_4);
+    
+        //FLATBREAD
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "raw_flatbread"), RAW_FLATBREAD);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "raw_cheese_flatbread"), RAW_CHEESE_FLATBREAD);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "raw_pizza"), new BlockItem(RAW_Pizza, new Item.Settings().maxCount(1)));
+
+     //COOKED
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "bun"), BUN);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "new_bread"), new AliasedBlockItem(BREADBLOCK, new Item.Settings().maxCount(2)));
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "bread_slice"), BREAD_SLICE);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "chocolate_cookie"), CHOCOLATE_COOKIE);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "coked_donut"), COKED_DONUT);
+        
+        //PIE
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "berries_pie"), BERRIES_PIE);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "honey_pie"), HONEY_PIE);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "melon_pie"), MELON_PIE);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "carrot_pie"), CARROT_PIE);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "strawberry_pie"), STRAWBERRY_PIE);
+        
+        //CREAM
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "cream_donut"), CREAM_DONUT);
+        
+        //CHOCOLATE
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "chocolate_cake"), new BlockItem(CHOCOLATE_CAKE, new Item.Settings().maxCount(1)));
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "chocolate_donut"), CHOCOLATE_DONUT);
+        
+        //STRAWBERRY
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "strawberry_donut"), STRAWBERRY_DONUT);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "strawberry_cake"), new BlockItem(STRAWBERRY_CAKE, new Item.Settings().maxCount(1)));
+        
+        //HONEY
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "honey_donut"), HONEY_DONUT);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "honey_cake"), new BlockItem(HONEY_CAKE, new Item.Settings().maxCount(1)));
+        
+        //FLATBREAD
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "pizza"), new BlockItem(Pizza, new Item.Settings().maxCount(1)));
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "cheese_flatbread"), CHEESE_FLATBREAD);
+      //Tools
+        
+        //Iron
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "iron_knife"), IRON_KNIFE);   
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "iron_spoon"), IRON_SPOON);   
+        
+        //Gold
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "golden_knife"), GOLDEN_KNIFE);   
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "golden_spoon"), GOLDEN_SPOON);  
+
+    //Deleted
+        //Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "raw_bread"), RAW_BREAD);
+        //Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "rolling_pin_1"), ROLLING_PIN_1);   
+        //Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "rolling_pin_2"), ROLLING_PIN_2);  
+
+        //==============================Block======================================//
+        
+        //Crop
+        Registry.register(Registry.BLOCK, new Identifier(RBP.MOD_ID,"strawberrybush"), STRAWBERRYBUSH);
+        Registry.register(Registry.BLOCK, new Identifier(RBP.MOD_ID,"strawberrybush_hay"), STRAWBERRYBUSH_HAY);
+        
+        //Raw Cake
+        Registry.register(Registry.BLOCK, new Identifier(RBP.MOD_ID, "raw_cake"), RAW_CAKE);
+        Registry.register(Registry.BLOCK, new Identifier(RBP.MOD_ID, "raw_honey_cake"), RAW_HONEY_CAKE);
+        Registry.register(Registry.BLOCK, new Identifier(RBP.MOD_ID, "raw_chocolate_cake"), RAW_CHOCOLATE_CAKE);
+        Registry.register(Registry.BLOCK, new Identifier(RBP.MOD_ID, "raw_strawberry_cake"), RAW_STRAWBERRY_CAKE);
+        Registry.register(Registry.BLOCK, new Identifier(RBP.MOD_ID, "raw_pizza"), RAW_Pizza);
+        Registry.register(Registry.BLOCK, new Identifier(RBP.MOD_ID, "raw_bread_block"), RAW_BREADBLOCK);
+        
+        //Cake
+        Registry.register(Registry.BLOCK, new Identifier(RBP.MOD_ID, "honey_cake"), HONEY_CAKE);
+        Registry.register(Registry.BLOCK, new Identifier(RBP.MOD_ID, "chocolate_cake"), CHOCOLATE_CAKE);
+        Registry.register(Registry.BLOCK, new Identifier(RBP.MOD_ID, "strawberry_cake"), STRAWBERRY_CAKE);
+        Registry.register(Registry.BLOCK, new Identifier(RBP.MOD_ID, "pizza"), Pizza);
+        Registry.register(Registry.BLOCK, new Identifier(RBP.MOD_ID, "cheese_block"), CHEESE_BLOCK);
+        Registry.register(Registry.BLOCK, new Identifier(RBP.MOD_ID, "bread_block"), BREADBLOCK);
+        Registry.register(Registry.BLOCK, new Identifier(RBP.MOD_ID, "sausage_block"), SAUSAGE_BLOCK);
+        //sausage SAUSAGE
+    }
+}

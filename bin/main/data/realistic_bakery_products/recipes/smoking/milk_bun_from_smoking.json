@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:smoking",
+    "ingredient": {
+        "item": "realistic_bakery_products:milk_dough"
+    },
+    "result": "realistic_bakery_products:milk_bun",
+    "experience": 2,
+    "cookingtime": 100
+}

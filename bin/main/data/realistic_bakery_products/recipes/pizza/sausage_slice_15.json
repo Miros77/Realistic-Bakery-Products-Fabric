@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "#_#",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "realistic_bakery_products:sausage_slice"
+        },
+        "_": {
+            "item": "realistic_bakery_products:sausage_slice_9"
+        }
+    },
+    "result": {
+        "item": "realistic_bakery_products:sausage_slice_15",
+        "count": 1
+    }
+}

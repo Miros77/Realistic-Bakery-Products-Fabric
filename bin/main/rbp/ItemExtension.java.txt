@@ -1,0 +1,10 @@
+package rbp;
+
+import net.minecraft.item.Item;
+
+public class ItemExtension extends Item {
+
+    public ItemExtension(Settings settings) {
+        super(settings);
+    }
+}

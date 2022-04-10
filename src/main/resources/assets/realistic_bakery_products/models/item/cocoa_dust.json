@@ -1,0 +1,7 @@
+{
+	"credit": "Made with Miros77",
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "realistic_bakery_products:items/dust/cocoa_dust"
+	}
+}
