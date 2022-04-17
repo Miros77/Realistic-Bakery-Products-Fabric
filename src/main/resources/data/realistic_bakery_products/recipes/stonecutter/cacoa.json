@@ -1,8 +1,0 @@
-{
-    "type": "minecraft:stonecutting",
-    "ingredient": {
-        "item": "minecraft:cocoa_beans"
-    },
-    "result": "realistic_bakery_products:cocoa_dust",
-    "count": 1
-}
