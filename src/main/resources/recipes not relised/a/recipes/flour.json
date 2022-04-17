@@ -1,0 +1,10 @@
+{
+  "type": "mechanicaltech:milling",
+  "ingredient": {
+    "item": "minecraft:wheat"
+  },
+  "result":{
+    "item": "realistic_bakery_products:flour"
+  },
+  "time": 300
+}

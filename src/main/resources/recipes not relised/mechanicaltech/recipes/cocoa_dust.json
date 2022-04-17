@@ -1,0 +1,10 @@
+{
+  "type": "mechanicaltech:milling",
+  "ingredient": {
+    "item": "minecraft:cocoa_beans"
+  },
+  "result":{
+    "item": "realistic_bakery_products:cocoa_dust"
+  },
+  "time": 300
+}

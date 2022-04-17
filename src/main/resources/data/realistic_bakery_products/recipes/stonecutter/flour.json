@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "minecraft:wheat"
+    },
+    "result": "realistic_bakery_products:flour",
+    "count": 1
+}
