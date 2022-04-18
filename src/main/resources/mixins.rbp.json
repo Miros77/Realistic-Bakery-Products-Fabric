@@ -3,12 +3,12 @@
   "minVersion": "0.8",
   "package": "rbp.mixin",
   "compatibilityLevel": "JAVA_8",
-  "mixins": [],
-  "client": [
+  "mixins": [
     "item.ItemMixin"
   ],
+  "client": [],
+  "server": [],
   "injectors": {
     "defaultRequire": 1
-  },
-  "refmap": "realistic-bakery-products-refmap.json"
+  }
 }

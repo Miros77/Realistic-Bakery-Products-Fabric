@@ -53,14 +53,19 @@ public class ChokoladeCakeBlock extends CakeBlock {
    }
 
    public ActionResult tryEat(WorldAccess world, BlockPos pos, BlockState state, PlayerEntity player) {
+      //
       if (player.getStackInHand(Hand.MAIN_HAND).getItem() != ModRegistry.IRON_SPOON && player.getStackInHand(Hand.MAIN_HAND).getItem() != ModRegistry.GOLDEN_SPOON && player.getStackInHand(Hand.OFF_HAND).getItem() != ModRegistry.IRON_SPOON && player.getStackInHand(Hand.OFF_HAND).getItem() != ModRegistry.GOLDEN_SPOON)
+
       {
            return ActionResult.PASS;
         } else if (!player.canConsume(false)) {
            return ActionResult.PASS;
       } else {
          player.incrementStat(Stats.EAT_CAKE_SLICE);
+         //
+
          player.getHungerManager().add(7, 0.5F);
+         //
          int i = (Integer)state.get(BITES);
          if (i < 6) {
             world.setBlockState(pos, (BlockState)state.with(BITES, i + 1), 3);

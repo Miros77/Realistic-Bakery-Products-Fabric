@@ -31,24 +31,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 
-//NEW
-
-
-//Not use
-  //import net.minecraft.entity.ai.pathing.NavigationType;
-  //import net.minecraft.item.ItemStack;
-  //import net.minecraft.world.WorldView;
-  //import net.minecraft.util.math.Direction;
-  //import net.minecraft.util.shape.VoxelShape;
-  //import net.minecraft.world.BlockView;
-  //import net.minecraft.world.World;
-  //import net.minecraft.state.StateManager;
-  //import net.minecraft.state.property.IntProperty;
-  //import net.minecraft.state.property.Properties;
-  //import net.minecraft.util.Hand;
-  //import net.minecraft.util.hit.BlockHitResult;
-//Not use  
-
 public class Cheese extends CakeBlock {
 	public Cheese() {
 		super(FabricBlockSettings.of(Material.CAKE).ticksRandomly().sounds(BlockSoundGroup.CORAL).nonOpaque());
