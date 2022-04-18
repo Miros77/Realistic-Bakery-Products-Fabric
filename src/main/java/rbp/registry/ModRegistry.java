@@ -3,26 +3,11 @@ package rbp.registry;
 //=========================================Imports=========================================//
 
 //Rbp
+import rbp.*;
 import rbp.RBP;
-import rbp.registry.block.cake.cake.ChokoladeCakeBlock;
-import rbp.registry.block.cake.cake.HoneyCakeBlock;
-import rbp.registry.block.cake.cake.StrawberryCakeBlock;
-
-import rbp.registry.block.cake.custom_cake.Pizza.Pizza;
-import rbp.registry.block.cake.custom_cake.Pizza.RawPizza;
-import rbp.registry.block.cake.custom_cake.bread.BreadBlock;
-import rbp.registry.block.cake.custom_cake.bread.RawBreadBlock;
-import rbp.registry.block.cake.custom_cake.cheese.Cheese;
-import rbp.registry.block.cake.custom_cake.sausage.Sausage;
-
-import rbp.registry.block.cake.rawcake.RawChokoladeCakeBlock;
-import rbp.registry.block.cake.rawcake.RawHoneyCakeBlock;
-import rbp.registry.block.cake.rawcake.RawStrawberryCakeBlock;
-
+import rbp.registry.block.cake.*;
 import rbp.registry.block.crop.StrawberryBushBlock;
 import rbp.registry.block.crop.StrawberryBushBlockHay;
-
-import rbp.*;
 
 //Tooltip 
 import rbp.registry.item.IngredientsforPizza;
