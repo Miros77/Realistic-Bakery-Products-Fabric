@@ -10,7 +10,7 @@ import net.minecraft.block.Material;
 import net.minecraft.block.SweetBerryBushBlock;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import javax.swing.text.html.BlockView;
-import net.minecraft.block.Block;
+//import net.minecraft.block.Block;
 //import net.minecraft.block.FlowerPotBlock;
 import net.minecraft.block.BlockState;
 
@@ -40,9 +40,6 @@ import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.player.PlayerEntity;
 
-//Enchants
-import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.enchantment.Enchantments;
 
 //World
 import net.minecraft.world.World;
@@ -93,7 +90,7 @@ public class StrawberryBushBlock extends SweetBerryBushBlock {
     } else if (i > 1) {
       int j = 1 + world.random.nextInt(2);
       dropStack(world, pos, new ItemStack(ModRegistry.STRAWBERRY, j + (bl ? 1 : 0)));
-      world.playSound((PlayerEntity) null, pos, SoundEvents.ITEM_SWEET_BERRIES_PICK_FROM_BUSH, SoundCategory.BLOCKS,
+      world.playSound((PlayerEntity) null, pos, SoundEvents.BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES, SoundCategory.BLOCKS,
           1.0F, 0.8F + world.random.nextFloat() * 0.4F);
       world.setBlockState(pos, (BlockState) state.with(AGE, 1), 2);
       return ActionResult.SUCCESS;
@@ -101,15 +98,5 @@ public class StrawberryBushBlock extends SweetBerryBushBlock {
       return super.onUse(state, world, pos, player, hand, hit);
     }
   }
-
-  
-
-  @Override
-  public void onStacksDropped(BlockState state, World world, BlockPos pos, ItemStack stack) {
-    ItemStack bush = new ItemStack(ModRegistry.STRAWBERRY);
-    super.onStacksDropped(state, world, pos, stack);
-    if (EnchantmentHelper.getLevel(Enchantments.SILK_TOUCH, stack) == 1) {
-      Block.dropStack(world, pos, bush);
-    }
 }
-}
+

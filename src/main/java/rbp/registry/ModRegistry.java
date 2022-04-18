@@ -4,21 +4,18 @@ package rbp.registry;
 
 //Rbp
 import rbp.RBP;
-import rbp.registry.block.cake.cake.ChokoladeCakeBlock;
-import rbp.registry.block.cake.cake.HoneyCakeBlock;
-import rbp.registry.block.cake.cake.StrawberryCakeBlock;
-
-import rbp.registry.block.cake.custom_cake.Pizza.Pizza;
-import rbp.registry.block.cake.custom_cake.Pizza.RawPizza;
-import rbp.registry.block.cake.custom_cake.bread.BreadBlock;
-import rbp.registry.block.cake.custom_cake.bread.RawBreadBlock;
-import rbp.registry.block.cake.custom_cake.cheese.Cheese;
-import rbp.registry.block.cake.custom_cake.sausage.Sausage;
-
-import rbp.registry.block.cake.rawcake.RawChokoladeCakeBlock;
-import rbp.registry.block.cake.rawcake.RawHoneyCakeBlock;
-import rbp.registry.block.cake.rawcake.RawStrawberryCakeBlock;
-
+import rbp.registry.block.cake.RawChokoladeCakeBlock;
+import rbp.registry.block.cake.RawHoneyCakeBlock;
+import rbp.registry.block.cake.RawStrawberryCakeBlock;
+import rbp.registry.block.cake.Sausage;
+import rbp.registry.block.cake.ChokoladeCakeBlock;
+import rbp.registry.block.cake.HoneyCakeBlock;
+import rbp.registry.block.cake.StrawberryCakeBlock;
+import rbp.registry.block.cake.Pizza;
+import rbp.registry.block.cake.RawPizza;
+import rbp.registry.block.cake.BreadBlock;
+import rbp.registry.block.cake.RawBreadBlock;
+import rbp.registry.block.cake.Cheese;
 import rbp.registry.block.crop.StrawberryBushBlock;
 import rbp.registry.block.crop.StrawberryBushBlockHay;
 

@@ -2,11 +2,11 @@
   "required": true,
   "minVersion": "0.8",
   "package": "rbp.mixin",
-  "compatibilityLevel": "JAVA_8",
-  "mixins": [],
-  "client": [
-    "item.ItemMixin"
+  "compatibilityLevel": "JAVA_16",
+  "mixins": [
+  	"item.ItemMixin"
   ],
+  "client": [],
   "injectors": {
     "defaultRequire": 1
   },
