@@ -10,7 +10,7 @@ import net.minecraft.block.ShapeContext;
 //Sound
 import net.minecraft.sound.BlockSoundGroup;
 
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -112,7 +112,7 @@ public class RawPizza extends CakeBlock {
       } else {
          player.incrementStat(Stats.EAT_CAKE_SLICE);
          player.getHungerManager().add(2, 0.2F);
-         player.applyStatusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 300, 0));
+         player.addStatusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 300, 0));
  
          int i = (Integer)state.get(BITES);
          if (i < 6) {

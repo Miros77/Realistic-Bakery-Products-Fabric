@@ -1,0 +1,23 @@
+Initialized native services in: D:\__Програмы\,ProgramFiles\Gradle\gradle-6.5.1-bin\native
+Found daemon DaemonInfo{pid=7816, address=[58b81779-2f39-4dee-9a2d-e79ff39333a7 port:60942, addresses:[/127.0.0.1, /0:0:0:0:0:0:0:1]], state=Idle, lastBusy=1650665814557, context=DefaultDaemonContext[uid=92cad0cc-a78f-4df3-bd40-107a986eedf7,javaHome=C:\Program Files\Java\jdk-11,daemonRegistryDir=D:\__Програмы\,ProgramFiles\Gradle\gradle-6.5.1-bin\daemon,pid=7816,idleTimeout=10800000,priority=NORMAL,daemonOpts=--add-opens,java.base/java.util=ALL-UNNAMED,--add-opens,java.base/java.lang=ALL-UNNAMED,--add-opens,java.base/java.lang.invoke=ALL-UNNAMED,--add-opens,java.prefs/java.util.prefs=ALL-UNNAMED,-Xmx1G,-Dfile.encoding=utf8,-Duser.country=RU,-Duser.language=ru,-Duser.variant]} however its context does not match the desired criteria.
+At least one daemon option is different.
+Wanted: DefaultDaemonContext[uid=null,javaHome=C:\Program Files\Java\jdk-11,daemonRegistryDir=D:\__Програмы\,ProgramFiles\Gradle\gradle-6.5.1-bin\daemon,pid=6748,idleTimeout=null,priority=NORMAL,daemonOpts=--add-opens,java.base/java.util=ALL-UNNAMED,--add-opens,java.base/java.lang=ALL-UNNAMED,--add-opens,java.base/java.lang.invoke=ALL-UNNAMED,--add-opens,java.prefs/java.util.prefs=ALL-UNNAMED,-Xmx1G,-Dfile.encoding=windows-1251,-Duser.country=RU,-Duser.language=ru,-Duser.variant]
+Actual: DefaultDaemonContext[uid=92cad0cc-a78f-4df3-bd40-107a986eedf7,javaHome=C:\Program Files\Java\jdk-11,daemonRegistryDir=D:\__Програмы\,ProgramFiles\Gradle\gradle-6.5.1-bin\daemon,pid=7816,idleTimeout=10800000,priority=NORMAL,daemonOpts=--add-opens,java.base/java.util=ALL-UNNAMED,--add-opens,java.base/java.lang=ALL-UNNAMED,--add-opens,java.base/java.lang.invoke=ALL-UNNAMED,--add-opens,java.prefs/java.util.prefs=ALL-UNNAMED,-Xmx1G,-Dfile.encoding=utf8,-Duser.country=RU,-Duser.language=ru,-Duser.variant]
+
+  Looking for a different daemon...
+The client will now receive all logging from the daemon (pid: 6740). The daemon log file: D:\__Програмы\,ProgramFiles\Gradle\gradle-6.5.1-bin\daemon\5.6.3\daemon-6740.out.log
+Starting 2nd build in daemon [uptime: 49.894 secs, performance: 99%]
+Using 2 worker leases.
+Starting Build
+Settings evaluated using settings file 'D:\вёрстка\Minecraft Mods projets\Realistic-Bakery-Products-Fabric 1 15 2\settings.gradle'.
+Projects loaded. Root project using build file 'D:\вёрстка\Minecraft Mods projets\Realistic-Bakery-Products-Fabric 1 15 2\build.gradle'.
+Included projects: [root project 'Realistic-Bakery-Products-Fabric 1 15 2']
+
+> Configure project :
+Evaluating root project 'Realistic-Bakery-Products-Fabric 1 15 2' using build file 'D:\вёрстка\Minecraft Mods projets\Realistic-Bakery-Products-Fabric 1 15 2\build.gradle'.
+Fabric Loom: 0.4.33 Build(jenkins #33)
+:setting up loom dependencies
+'D:\__Програмы\,ProgramFiles\Gradle\gradle-6.5.1-bin\caches\fabric-loom\version_manifest.json' Not Modified, skipping.
+'D:\__Програмы\,ProgramFiles\Gradle\gradle-6.5.1-bin\caches\fabric-loom\minecraft-1.15.2-client.jar' Not Modified, skipping.
+'D:\__Програмы\,ProgramFiles\Gradle\gradle-6.5.1-bin\caches\fabric-loom\minecraft-1.15.2-server.jar' Not Modified, skipping.
+:merging jars
