@@ -36,7 +36,7 @@ import net.minecraft.block.ShapeContext;
 import net.minecraft.sound.BlockSoundGroup;
 
 //My
-import rbp.registry.ModRegistry;
+//import rbp.registry.ModRegistry;
 
 //Block
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -97,7 +97,7 @@ public class RawPizza extends CakeBlock {
   //
      
   protected static ActionResult tryEat(WorldAccess world, BlockPos pos, BlockState state, PlayerEntity player) {
-if (!player.canConsume(true)) {
+if (!player.canConsume(false)) {
       return ActionResult.PASS;
 	} else {
 	   player.incrementStat(Stats.EAT_CAKE_SLICE);

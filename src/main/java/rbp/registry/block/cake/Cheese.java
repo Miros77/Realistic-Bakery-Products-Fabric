@@ -9,8 +9,8 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
 import net.minecraft.state.StateManager;
-import net.minecraft.state.property.IntProperty;
-import net.minecraft.state.property.Properties;
+//import net.minecraft.state.property.IntProperty;
+//import net.minecraft.state.property.Properties;
 import net.minecraft.tag.ItemTags;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
@@ -93,14 +93,14 @@ public class Cheese extends CakeBlock {
   protected static ActionResult tryEat(WorldAccess world, BlockPos pos, BlockState state, PlayerEntity player) {
   if (player.getStackInHand(Hand.MAIN_HAND).getItem() != ModRegistry.IRON_KNIFE && player.getStackInHand(Hand.MAIN_HAND).getItem() != ModRegistry.GOLDEN_KNIFE && player.getStackInHand(Hand.OFF_HAND).getItem() != ModRegistry.IRON_KNIFE && player.getStackInHand(Hand.OFF_HAND).getItem() != ModRegistry.GOLDEN_KNIFE){
 	   return ActionResult.PASS;
-   } else if (!player.canConsume(false)) {
+   } else if (!player.canConsume(true)) {
       return ActionResult.PASS;
 	} else {
 	   player.incrementStat(Stats.EAT_CAKE_SLICE);
 	   player.getHungerManager().add(2, 0.1F);
 	   int i = (Integer)state.get(BITES);
 	   world.emitGameEvent(player, GameEvent.EAT, (BlockPos)pos);
-	   world.spawnEntity(new ItemEntity((World) world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ModRegistry.BREAD_SLICE, 1)));
+	   world.spawnEntity(new ItemEntity((World) world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ModRegistry.CHEESE_SLICE, 1)));
 	   if (i < 6) {
 		  world.setBlockState(pos, (BlockState)state.with(BITES, i + 1), Block.NOTIFY_ALL);
 	   } else {

@@ -1,6 +1,6 @@
 package rbp.registry.block.cake;
 
-import net.minecraft.entity.ItemEntity;
+//import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -9,8 +9,8 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
 import net.minecraft.state.StateManager;
-import net.minecraft.state.property.IntProperty;
-import net.minecraft.state.property.Properties;
+//import net.minecraft.state.property.IntProperty;
+//import net.minecraft.state.property.Properties;
 import net.minecraft.tag.ItemTags;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
@@ -93,7 +93,7 @@ public class HoneyCakeBlock extends CakeBlock {
   protected static ActionResult tryEat(WorldAccess world, BlockPos pos, BlockState state, PlayerEntity player) {
    if (player.getStackInHand(Hand.MAIN_HAND).getItem() != ModRegistry.IRON_SPOON && player.getStackInHand(Hand.MAIN_HAND).getItem() != ModRegistry.GOLDEN_SPOON && player.getStackInHand(Hand.OFF_HAND).getItem() != ModRegistry.IRON_SPOON && player.getStackInHand(Hand.OFF_HAND).getItem() != ModRegistry.GOLDEN_SPOON){
 	   return ActionResult.PASS;
-   } else if (!player.canConsume(true)) {
+   } else if (!player.canConsume(false)) {
       return ActionResult.PASS;
 	} else {
 	   player.incrementStat(Stats.EAT_CAKE_SLICE);

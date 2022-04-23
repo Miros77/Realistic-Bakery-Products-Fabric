@@ -96,7 +96,7 @@ public class RawBreadBlock extends CakeBlock {
   protected static ActionResult tryEat(WorldAccess world, BlockPos pos, BlockState state, PlayerEntity player) {
   if (player.getStackInHand(Hand.MAIN_HAND).getItem() != ModRegistry.IRON_KNIFE && player.getStackInHand(Hand.MAIN_HAND).getItem() != ModRegistry.GOLDEN_KNIFE && player.getStackInHand(Hand.OFF_HAND).getItem() != ModRegistry.IRON_KNIFE && player.getStackInHand(Hand.OFF_HAND).getItem() != ModRegistry.GOLDEN_KNIFE){
 	   return ActionResult.PASS;
-	} else if (!player.canConsume(false)) {
+	} else if (!player.canConsume(true)) {
 		return ActionResult.PASS;
 	} else {
 	   player.incrementStat(Stats.EAT_CAKE_SLICE);
