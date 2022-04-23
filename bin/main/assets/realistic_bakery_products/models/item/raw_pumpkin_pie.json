@@ -1,7 +1,0 @@
-{
-	"credit": "Made with Blockbench",
-	"parent": "item/generated",
-	"textures": {
-		"layer0": "realistic_bakery_products:items/raw_pie/raw_pumpkin_pie"
-	}
-}

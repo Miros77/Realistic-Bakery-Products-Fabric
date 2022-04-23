@@ -1,9 +1,0 @@
-{
-    "type": "minecraft:smoking",
-    "ingredient": {
-        "item": "realistic_bakery_products:raw_bread_slice"
-    },
-    "result": "realistic_bakery_products:bread_slice",
-    "experience": 2,
-    "cookingtime": 100
-}
