@@ -5,7 +5,7 @@ import net.minecraft.item.ItemStack;
 //import net.minecraft.item.Items;
 //Block
 import net.minecraft.block.Material;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.CakeBlock;
 
