@@ -8,7 +8,7 @@ import net.minecraft.item.ItemStack;
 
 import net.minecraft.block.Material;
 import net.minecraft.block.SweetBerryBushBlock;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import javax.swing.text.html.BlockView;
 import net.minecraft.block.BlockState;
 
@@ -45,7 +45,7 @@ import net.minecraft.world.World;
 public class StrawberryBushBlockHay extends SweetBerryBushBlock {
 
   public StrawberryBushBlockHay() {
-    super(FabricBlockSettings.of(Material.PLANT).ticksRandomly().noCollision().sounds(BlockSoundGroup.SWEET_BERRY_BUSH).nonOpaque());
+    super(FabricBlockSettings.of(Material.PLANT).ticksRandomly().noCollision().sounds(BlockSoundGroup.SWEET_BERRY_BUSH).nonOpaque().build());
   }
 
   @Environment(EnvType.CLIENT)
