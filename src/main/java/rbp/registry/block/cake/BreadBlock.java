@@ -58,7 +58,7 @@ import net.minecraft.world.WorldView;
 
 public class BreadBlock extends CakeBlock {
 	public BreadBlock() {
-		super(FabricBlockSettings.of(Material.CAKE).ticksRandomly().sounds(BlockSoundGroup.WOOL).nonOpaque()1);
+		super(FabricBlockSettings.of(Material.CAKE).ticksRandomly().sounds(BlockSoundGroup.WOOL).nonOpaque());
 		this.setDefaultState((BlockState)((BlockState)this.stateManager.getDefaultState()).with(BITES, 0));
 	}
 
