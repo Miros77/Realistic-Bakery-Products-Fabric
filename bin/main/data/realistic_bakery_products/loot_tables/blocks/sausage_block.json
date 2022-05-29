@@ -14,7 +14,7 @@
           "condition": "minecraft:block_state_property",
           "block": "realistic_bakery_products:sausage_block",
           "properties": {
-            "bites": "0"
+            "level": "0"
           }
         }
       ],

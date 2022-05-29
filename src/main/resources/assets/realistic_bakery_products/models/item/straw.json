@@ -1,0 +1,65 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"6": "realistic_bakery_products:block/crop/strawberry/straw",
+		"particle": "realistic_bakery_products:block/crop/strawberry/straw"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 0.1, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [10, 8, 10]},
+			"faces": {
+				"north": {"uv": [0, 0, 1, 1], "texture": "#6"},
+				"east": {"uv": [0, 0, 1, 1], "texture": "#6"},
+				"south": {"uv": [0, 0, 1, 1], "texture": "#6"},
+				"west": {"uv": [0, 0, 1, 1], "texture": "#6"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#6"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#6"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [65, 0, 0],
+			"translation": [0, 2.25, 1],
+			"scale": [0.23438, 0.23438, 0.23438]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [65, 0, 0],
+			"translation": [0, 2.25, 1],
+			"scale": [0.23438, 0.23438, 0.23438]
+		},
+		"firstperson_righthand": {
+			"translation": [4.25, 7, 0]
+		},
+		"firstperson_lefthand": {
+			"translation": [4.25, 7, 0]
+		},
+		"ground": {
+			"translation": [0, 1.75, 0],
+			"scale": [0.35352, 0.35352, 0.35352]
+		},
+		"gui": {
+			"rotation": [23, -45, 0],
+			"translation": [0, 5, 0],
+			"scale": [0.81446, 0.81446, 0.81446]
+		},
+		"head": {
+			"translation": [0, 18.25, 0],
+			"scale": [1.51367, 1.51367, 1.51367]
+		},
+		"fixed": {
+			"translation": [0, 3.75, -3],
+			"scale": [1.0625, 1.0625, 1.0625]
+		}
+	},
+	"groups": [
+		{
+			"name": "base",
+			"origin": [9, 8, 9],
+			"color": 0,
+			"children": [0]
+		}
+	]
+}

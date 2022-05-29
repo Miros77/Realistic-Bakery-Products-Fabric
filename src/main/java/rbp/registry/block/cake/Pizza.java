@@ -45,7 +45,7 @@ import net.minecraft.world.WorldView;
 
 //Sound
 
-public class Pizza extends CakeBlock {
+public class Pizza extends Block {
 
    public Pizza() {
       super(FabricBlockSettings.of(Material.CAKE).ticksRandomly().sounds(BlockSoundGroup.WOOL).nonOpaque());
@@ -83,7 +83,7 @@ public class Pizza extends CakeBlock {
          player.getHungerManager().add(9, 0.8F);
  
          int i = (Integer)state.get(BITES);
-         if (i < 6) {
+         if (i < 3) {
             world.setBlockState(pos, (BlockState)state.with(BITES, i + 1), 3);
          } else {
             world.removeBlock(pos, false);
@@ -119,15 +119,12 @@ public class Pizza extends CakeBlock {
    }
 
    static {
-      BITES = Properties.BITES;
+      BITES = Properties.LEVEL_3;
       BITES_TO_SHAPE = new VoxelShape[]{
          Block.createCuboidShape(1.0D, 0.0D, 1.0D, 15.0D, 0.6D, 15.0D), 
          Block.createCuboidShape(3.0D, 0.0D, 1.0D, 15.0D, 0.6D, 15.0D), 
          Block.createCuboidShape(5.0D, 0.0D, 1.0D, 15.0D, 0.6D, 15.0D), 
-         Block.createCuboidShape(7.0D, 0.0D, 1.0D, 15.0D, 0.6D, 15.0D), 
-         Block.createCuboidShape(9.0D, 0.0D, 1.0D, 15.0D, 0.6D, 15.0D), 
-         Block.createCuboidShape(11.0D, 0.0D, 1.0D, 15.0D, 0.6D, 15.0D), 
-         Block.createCuboidShape(13.0D, 0.0D, 1.0D, 15.0D, 0.6D, 15.0D)};
+         Block.createCuboidShape(7.0D, 0.0D, 1.0D, 15.0D, 0.6D, 15.0D)};
    }
    
 }

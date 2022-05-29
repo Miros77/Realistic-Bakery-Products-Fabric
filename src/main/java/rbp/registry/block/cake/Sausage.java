@@ -20,7 +20,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.CakeBlock;
+//import net.minecraft.block.CakeBlock;
 
 //Util
 import net.minecraft.util.math.BlockPos;
@@ -36,7 +36,7 @@ import net.minecraft.entity.player.PlayerEntity;
 //import net.minecraft.stat.Stats;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
-import net.minecraft.state.property.Properties;
+//import net.minecraft.state.property.Properties;
 
 //World
 
@@ -50,13 +50,9 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldView;
 
-//Sound
+import static rbp.registry.block.cake.properties.PropertiesBites.LEVEL_29;
 
-//World
-//import net.minecraft.world.World;
-//import net.minecraft.world.WorldAccess;
-
-public class Sausage extends CakeBlock {
+public class Sausage extends Block {
 	public Sausage() {
 		super(FabricBlockSettings.of(Material.CAKE).ticksRandomly().sounds(BlockSoundGroup.WOOL).nonOpaque());
 		this.setDefaultState((BlockState)((BlockState)this.stateManager.getDefaultState()).with(BITES, 0));
@@ -96,7 +92,7 @@ public class Sausage extends CakeBlock {
         } else {
            world.spawnEntity(new ItemEntity((World) world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ModRegistry.SAUSAGE_SLICE, 1)));
            int i = (Integer)state.get(BITES);
-           if (i < 6) {
+           if (i < 29) {
               world.setBlockState(pos, (BlockState)state.with(BITES, i + 1), 3);
            } else {
               world.removeBlock(pos, false);
@@ -129,17 +125,41 @@ public class Sausage extends CakeBlock {
 	 public boolean canPathfindThrough(BlockState state, BlockView world, BlockPos pos, NavigationType type) {
 		return false;
 	 }
-  
+
 	 static {
-		BITES = Properties.BITES;
+		BITES = LEVEL_29;
 		BITES_TO_SHAPE = new VoxelShape[]{
-			Block.createCuboidShape(1D, 0D, 4.500000000000002D, 15D, 8D, 11.500000000000002D),
-			Block.createCuboidShape(3D, 0D, 4.500000000000002D, 15D, 8D, 11.500000000000002D), 
-			Block.createCuboidShape(5D, 0D, 4.500000000000002D, 15D, 9D, 11.500000000000002D), 
-			Block.createCuboidShape(7D, 0D, 4.500000000000002D, 15D, 9D, 11.500000000000002D), 
-			Block.createCuboidShape(9D, 0D, 4.500000000000002D, 15D, 9D, 11.500000000000002D), 
-			Block.createCuboidShape(11D, 0D, 4.500000000000002D, 15D, 9D, 11.500000000000002D), 
-			Block.createCuboidShape(13D, 0D, 4.500000000000002D, 14D, 7D, 11.500000000000002D)};
+			Block.createCuboidShape(1.525, 0.025000000000000355, 6.775, 14.45, 4.475, 9.225),
+			Block.createCuboidShape(1.525, 0.025000000000000355, 6.775, 14.45, 4.475, 9.225),
+			Block.createCuboidShape(1.525, 0.025000000000000355, 6.775, 14.45, 4.475, 9.225),
+            Block.createCuboidShape(2.0250000000000004, 0.025000000000000355, 6.775, 14.45, 4.475, 9.225), 		
+            Block.createCuboidShape(2.5250000000000004, 0.025000000000000355, 6.775, 14.45, 4.475, 9.225),		
+            Block.createCuboidShape(3.0250000000000004, 0.025000000000000355, 6.775, 14.45, 4.475, 9.225),		
+            Block.createCuboidShape(3.5250000000000004, 0.025000000000000355, 6.775, 14.45, 4.475, 9.225),		
+            Block.createCuboidShape(4.0250000000000004, 0.025000000000000355, 6.775, 14.45, 4.475, 9.225),		
+            Block.createCuboidShape(4.5250000000000004, 0.025000000000000355, 6.775, 14.45, 4.475, 9.225),		
+            Block.createCuboidShape(5.0250000000000004, 0.025000000000000355, 6.775, 14.45, 4.475, 9.225),		
+            Block.createCuboidShape(5.5250000000000004, 0.025000000000000355, 6.775, 14.45, 4.475, 9.225),		
+            Block.createCuboidShape(6.0250000000000004, 0.025000000000000355, 6.775, 14.45, 4.475, 9.225),		
+            Block.createCuboidShape(6.5250000000000004, 0.025000000000000355, 6.775, 14.45, 4.475, 9.225),		
+            Block.createCuboidShape(7.0250000000000004, 0.025000000000000355, 6.775, 14.45, 4.475, 9.225),		
+            Block.createCuboidShape(7.5250000000000004, 0.025000000000000355, 6.775, 14.45, 4.475, 9.225),		
+            Block.createCuboidShape(8.0250000000000004, 0.025000000000000355, 6.775, 14.45, 4.475, 9.225),		
+            Block.createCuboidShape(8.5250000000000004, 0.025000000000000355, 6.775, 14.45, 4.475, 9.225),		
+            Block.createCuboidShape(9.0250000000000004, 0.025000000000000355, 6.775, 14.45, 4.475, 9.225),		
+            Block.createCuboidShape(9.5250000000000004, 0.025000000000000355, 6.775, 14.45, 4.475, 9.225),			
+            Block.createCuboidShape(10.0250000000000004, 0.025000000000000355, 6.775, 14.45, 4.475, 9.225),			
+            Block.createCuboidShape(10.5250000000000004, 0.025000000000000355, 6.775, 14.45, 4.475, 9.225),			
+            Block.createCuboidShape(11.0250000000000004, 0.025000000000000355, 6.775, 14.45, 4.475, 9.225),			
+            Block.createCuboidShape(11.5250000000000004, 0.025000000000000355, 6.775, 14.45, 4.475, 9.225),			
+            Block.createCuboidShape(12.0250000000000004, 0.025000000000000355, 6.775, 14.45, 4.475, 9.225),			
+            Block.createCuboidShape(12.5250000000000004, 0.025000000000000355, 6.775, 14.45, 4.475, 9.225),			
+            Block.createCuboidShape(13.0250000000000004, 0.025000000000000355, 6.775, 14.45, 4.475, 9.225),			
+            Block.createCuboidShape(13.5250000000000004, 0.025000000000000355, 6.775, 14.45, 4.475, 9.225),			
+            Block.createCuboidShape(14.0250000000000004, 0.025000000000000355, 6.775, 14.45, 4.475, 9.225),			
+            Block.createCuboidShape(14.524999999999999, 0.025000000000000355, 6.775, 14.949999999999998, 3.4749999999999996, 9.225),			
+            Block.createCuboidShape(15.024999999999997, 0.025000000000000355, 6.775, 15.449999999999996, 2.4749999999999996, 9.225)			
+		};
 	 }
 	 
   }

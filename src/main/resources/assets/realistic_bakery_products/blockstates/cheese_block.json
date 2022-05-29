@@ -1,12 +1,18 @@
 
 {
     "variants": {
-        "bites=0": { "model": "realistic_bakery_products:block/cheese_block" },
-        "bites=1": { "model": "realistic_bakery_products:block/cheese_block_slice1" },
-        "bites=2": { "model": "realistic_bakery_products:block/cheese_block_slice2" },
-        "bites=3": { "model": "realistic_bakery_products:block/cheese_block_slice3" },
-        "bites=4": { "model": "realistic_bakery_products:block/cheese_block_slice4" },
-        "bites=5": { "model": "realistic_bakery_products:block/cheese_block_slice5" },
-        "bites=6": { "model": "realistic_bakery_products:block/cheese_block_slice6" }
+        "level=0": { "model": "realistic_bakery_products:block/cheese_block" },
+        "level=1": { "model": "realistic_bakery_products:block/cheese_block_slice1" },
+        "level=2": { "model": "realistic_bakery_products:block/cheese_block_slice2" },
+        "level=3": { "model": "realistic_bakery_products:block/cheese_block_slice3" },
+        "level=4": { "model": "realistic_bakery_products:block/cheese_block_slice4" },
+        "level=5": { "model": "realistic_bakery_products:block/cheese_block_slice5" },
+        "level=6": { "model": "realistic_bakery_products:block/cheese_block_slice6" },
+        "level=7": { "model": "realistic_bakery_products:block/cheese_block_slice7" },
+        "level=8": { "model": "realistic_bakery_products:block/cheese_block_slice8" },
+        "level=9": { "model": "realistic_bakery_products:block/cheese_block_slice9" },
+        "level=10": { "model": "realistic_bakery_products:block/cheese_block_slice10" },
+        "level=11": { "model": "realistic_bakery_products:block/cheese_block_slice11" },
+        "level=12": { "model": "realistic_bakery_products:block/cheese_block_slice12" }
     }
 }

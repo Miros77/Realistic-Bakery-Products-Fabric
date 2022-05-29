@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"textures": {
 		"6": "realistic_bakery_products:block/cheese/cheese_inner",
-				"particle": "realistic_bakery_products:block/cheese/cheese_inner"
+		"particle": "realistic_bakery_products:block/cheese/cheese_inner"
 	},
 	"elements": [
 		{
@@ -41,5 +41,14 @@
 		"head": {
 			"translation": [0, 13.75, 0.25]
 		}
-	}
+	},
+	"groups": [
+		0,
+		{
+			"name": "VoxelShapes",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": []
+		}
+	]
 }

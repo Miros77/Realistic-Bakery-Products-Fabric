@@ -6,30 +6,32 @@ package rbp.registry;
 import rbp.*;
 import rbp.RBP;
 import rbp.registry.block.cake.*;
+import rbp.registry.block.cakeconstructionstages.DestructibleBlock;
 import rbp.registry.block.crop.StrawberryBushBlock;
 import rbp.registry.block.crop.StrawberryBushBlockHay;
-
-//Tooltip 
-import rbp.registry.item.IngredientsforPizza;
-
-import rbp.registry.item.UseKnife;
-import rbp.registry.item.UseSpoon;
-
-import rbp.registry.item.GetSausageSlice;
-import rbp.registry.item.GetSliceCheese;
-import rbp.registry.item.GetSliceBread;
-import rbp.registry.item.GetSliceRawBread;
-
+//import rbp.registry.item.itemstochangetblock.DoughBlock;
+import rbp.registry.item.itemstochangetblock.DoughItem;
+import rbp.registry.item.itemstochangetblock.Rolling_Pin;
+import rbp.registry.item.itemstochangetblock.Straw;
+import rbp.registry.item.get.GetSausageSlice;
+import rbp.registry.item.get.GetSliceBread;
+import rbp.registry.item.get.GetSliceCheese;
+import rbp.registry.item.get.GetSliceRawBread;
+import rbp.registry.item.get.IngredientsforPizza;
+import rbp.registry.item.get.UseKnife;
+import rbp.registry.item.get.UseSpoon;
 //import rbp.registry.item.HandMillItem;
 //import rbp.registry.item.RollingPinItem;
 //Group
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 
 //Block
+
 import net.minecraft.block.Block;
 //import net.minecraft.block.Blocks;    
 //import com.miros77.rbp.registry.block.kitchen.Freezer;
-
+import net.minecraft.block.Material;
 //Effect
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -43,17 +45,16 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.sound.BlockSoundGroup;
+//import net.minecraft.item.ToolMaterials;
 //Util
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 
-
 public class ModRegistry {
 //=========================================ItemGroup=========================================//
-//public static final ItemGroup REALISTIC_BAKERY_PRODUCTS = FabricItemGroupBuilder.build(
-//	new Identifier("realistic_bakery_products", "realistic_bakery_products"),
-//    () -> new ItemStack(ModRegistry.RAW_BREADBLOCK));      
+ 
 
       public static final ItemGroup REALISTIC_BAKERY_PRODUCTS_NEW = FabricItemGroupBuilder.create(
         new Identifier("realistic_bakery_products", "realistic_bakery_products"))
@@ -72,7 +73,7 @@ public class ModRegistry {
               stacks.add(ItemStack.EMPTY);
               stacks.add(ItemStack.EMPTY);
               stacks.add(ItemStack.EMPTY);
-              stacks.add(new ItemStack(ModRegistry.DOUGH));
+              stacks.add(new ItemStack(ModRegistry.DOUGH_BLOCK));
               stacks.add(new ItemStack(ModRegistry.CHOCOLATE_DOUGH));
               stacks.add(new ItemStack(ModRegistry.HONEY_DOUGH));    //MILK_DOUGH//
               stacks.add(new ItemStack(ModRegistry.MILK_DOUGH));
@@ -112,7 +113,7 @@ public class ModRegistry {
               stacks.add(ItemStack.EMPTY);
               stacks.add(ItemStack.EMPTY);
               stacks.add(new ItemStack(ModRegistry.STRAWBERRYBUSH));
-              stacks.add(new ItemStack(ModRegistry.STRAWBERRYBUSH_HAY));
+              stacks.add(new ItemStack(ModRegistry.STRAW));
               stacks.add(new ItemStack(ModRegistry.STRAWBERRY));
               stacks.add(new ItemStack(ModRegistry.STRAWBERRY_BIG));
               stacks.add(new ItemStack(ModRegistry.PUMPKIN_SLICE));
@@ -212,9 +213,9 @@ public class ModRegistry {
               stacks.add(ItemStack.EMPTY);
               stacks.add(ItemStack.EMPTY);  
               stacks.add(new ItemStack(ModRegistry.SAUSAGE_SLICE));
-              stacks.add(new ItemStack(ModRegistry.SAUSAGE_SLICE_9));
-              stacks.add(new ItemStack(ModRegistry.SAUSAGE_SLICE_15));
-              stacks.add(new ItemStack(ModRegistry.BROWN_MUSHROOM_7));
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
+              stacks.add(ItemStack.EMPTY);
               stacks.add(ItemStack.EMPTY);
               stacks.add(ItemStack.EMPTY);
               stacks.add(ItemStack.EMPTY);
@@ -271,7 +272,7 @@ public class ModRegistry {
       public static final StrawberryBushBlockHay STRAWBERRYBUSH_HAY = new StrawberryBushBlockHay();
 
     //DOUGH
-    public static final Item DOUGH = new Item(new Item.Settings().food(new FoodComponent.Builder().hunger(1).saturationModifier(0.1f).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 300, 0), 0.3F).statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 300, 0), 0.3F).build()));
+    //public static final Item DOUGH = new Item(new Item.Settings().food(new FoodComponent.Builder().hunger(1).saturationModifier(0.1f).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 300, 0), 0.3F).statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 300, 0), 0.3F).build()));
     public static final Item CHOCOLATE_DOUGH = new Item(new Item.Settings().food(new FoodComponent.Builder().hunger(3).saturationModifier(0.1f).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 300, 0), 0.3F).statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 300, 0), 0.3F).build()));
     public static final Item HONEY_DOUGH = new Item(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.5f).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 300, 0), 0.3F).statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 300, 0), 0.3F).build()));
     public static final Item MILK_DOUGH = new Item(new Item.Settings().food(new FoodComponent.Builder().hunger(3).saturationModifier(0.4f).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 300, 0), 0.3F).statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 300, 0), 0.3F).build()));
@@ -365,11 +366,11 @@ public class ModRegistry {
     //Ingredients for Pizza
 
     //SAUSAGE
-    public static final Item SAUSAGE_SLICE_9 = new Item(new Item.Settings().maxCount(1));
-    public static final IngredientsforPizza SAUSAGE_SLICE_15 = new IngredientsforPizza(new Item.Settings().maxCount(1));
+    //public static final Item SAUSAGE_SLICE_9 = new Item(new Item.Settings().maxCount(1));
+    //public static final IngredientsforPizza SAUSAGE_SLICE_15 = new IngredientsforPizza(new Item.Settings().maxCount(1));
 
     //BROWN_MUSHROOM
-    public static final IngredientsforPizza BROWN_MUSHROOM_7 = new IngredientsforPizza(new Item.Settings().maxCount(1));
+    //public static final IngredientsforPizza BROWN_MUSHROOM_7 = new IngredientsforPizza(new Item.Settings().maxCount(1));
 
     //FLATBREAD
     public static final Item CHEESE_FLATBREAD = new Item(new Item.Settings().food(new FoodComponent.Builder().hunger(9).saturationModifier(0.6f).build()));
@@ -383,12 +384,25 @@ public class ModRegistry {
     public static final UseKnife IRON_KNIFE = new UseKnife(new Item.Settings().recipeRemainder(ModRegistry.IRON_KNIFE).maxCount(1)); 
     public static final UseSpoon IRON_SPOON = new UseSpoon(new Item.Settings().recipeRemainder(ModRegistry.IRON_SPOON).maxCount(1)); 
 
-    public static final KitchenAppliance ROLLING_PIN = new KitchenAppliance(new Item.Settings().maxCount(1)); 
+    //public static final Rolling_Pin ROLLING_PIN = new Rolling_Pin(ToolMaterials.RollingPinMaterial, new Item.Settings().maxCount(1)); 
+
+    
     //HAND_MILL parts
     public static final KitchenAppliance HAND_MILL = new KitchenAppliance(new Item.Settings().maxCount(1));  
     public static final Item HAND_MILL_WOODEN_FUNNEL = new Item(new Item.Settings().maxCount(1)); 
     public static final Item HAND_MILL_CRANK = new Item(new Item.Settings().maxCount(1)); 
-    public static final Item HAND_MILL_MILLSTONE = new Item(new Item.Settings().maxCount(1)); 
+    public static final Item HAND_MILL_MILLSTONE = new Item(new Item.Settings().maxCount(1));
+    //1.4.0
+    //Item
+    public static Item STRAW = new Straw(new Item.Settings());
+    public static Item ROLLING_PIN = new Rolling_Pin(new Item.Settings().maxCount(1));
+
+    public static final Item PIZZA_SLICE = new Item(new Item.Settings().food(new FoodComponent.Builder().hunger(9).saturationModifier(0.8f).build()));
+    public static final Item CHEESE_CRUMBS = new Item(new Item.Settings().food(new FoodComponent.Builder().hunger(9).saturationModifier(0.8f).build()));
+    public static final Item RAW_PIZZA_SLICE = new Item(new Item.Settings().food(new FoodComponent.Builder().hunger(9).saturationModifier(0.8f).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 300, 0), 0.3F).build()));
+
+    //Stages of cakes
+    public static Block DOUGH_BLOCK = new DestructibleBlock(FabricBlockSettings.of(Material.PLANT).strength(0.5F).sounds(BlockSoundGroup.WOOL));
 
 //=========================================Register: Items and Block=========================================//
     public static void registerItems() {
@@ -396,7 +410,7 @@ public class ModRegistry {
         Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "flour"), FLOUR);
         Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "cocoa_dust"), COCOA_DUST);
 
-        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "dough"), DOUGH);
+        //Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "dough"), DOUGH);
         Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "chocolate_dough"), CHOCOLATE_DOUGH);
         Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "honey_dough"), HONEY_DOUGH);
         Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "milk_dough"), MILK_DOUGH);
@@ -412,7 +426,7 @@ public class ModRegistry {
           //Seed
 
           Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "strawberry_seed"), new AliasedBlockItem(STRAWBERRYBUSH, new Item.Settings()));
-          Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "strawberry_hay"), new AliasedBlockItem(STRAWBERRYBUSH_HAY, new Item.Settings()));
+          //Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "strawberry_hay"), new AliasedBlockItem(STRAWBERRYBUSH_HAY, new Item.Settings()));
         
           Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "strawberry"), STRAWBERRY);
           Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "strawberry_big"), STRAWBERRY_BIG);
@@ -495,12 +509,13 @@ public class ModRegistry {
         //Meat
         Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "raw_sausage"), RAW_SAUSAGE); 
         Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "sausage"), new AliasedBlockItem(SAUSAGE_BLOCK, new Item.Settings().maxCount(1)));
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "dough"), new DoughItem(DOUGH_BLOCK, new Item.Settings().maxCount(1)));
         Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "sausage_slice"), SAUSAGE_SLICE); 
         
         //Ingredients for Pizza
-        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "sausage_slice_9"), SAUSAGE_SLICE_9); 
-        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "sausage_slice_15"), SAUSAGE_SLICE_15); 
-        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "brown_mushroom_7"), BROWN_MUSHROOM_7);
+        //Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "sausage_slice_9"), SAUSAGE_SLICE_9); 
+        //Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "sausage_slice_15"), SAUSAGE_SLICE_15); 
+        //Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "brown_mushroom_7"), BROWN_MUSHROOM_7);
         //Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "beetroot_slice_4"), BEETROOT_SLICE_4);
         
 
@@ -544,7 +559,9 @@ public class ModRegistry {
 
         //[Deleted]
            //Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "raw_bread"), RAW_BREAD);
-        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "rolling_pin"), ROLLING_PIN);      
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "rolling_pin"), ROLLING_PIN);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "straw"), STRAW);
+        Registry.register(Registry.BLOCK, new Identifier(RBP.MOD_ID,"dough"), DOUGH_BLOCK);
         //Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "glass_bowl"), GLASS_BOWL);   
 
 

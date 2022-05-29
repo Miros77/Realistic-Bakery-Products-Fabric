@@ -1,0 +1,56 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"1": "realistic_bakery_products:block/raw_cake/raw_strawberry_cake/raw_strawberry_cake_side",
+		"2": "realistic_bakery_products:block/raw_cake/raw_strawberry_cake/raw_strawberry_cake_top",
+		"4": "realistic_bakery_products:block/raw_cake/cake_base/raw_cake_bottom",
+		"particle": "realistic_bakery_products:block/raw_cake/raw_strawberry_cake/raw_strawberry_cake_side"
+	},
+	"elements": [
+		{
+			"from": [1, 0, 1],
+			"to": [15, 8, 15],
+			"faces": {
+				"north": {"uv": [1, 8, 15, 16], "texture": "#1"},
+				"east": {"uv": [1, 8, 15, 16], "texture": "#1"},
+				"south": {"uv": [1, 8, 15, 16], "texture": "#1"},
+				"west": {"uv": [1, 8, 15, 16], "texture": "#1"},
+				"up": {"uv": [1, 1, 15, 15], "texture": "#2"},
+				"down": {"uv": [1, 1, 15, 15], "texture": "#4"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [65, 0, 0],
+			"translation": [0, 3.25, 2],
+			"scale": [0.44727, 0.44727, 0.44727]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [67.5, 0, 0],
+			"translation": [0, 2.75, 2],
+			"scale": [0.44727, 0.44727, 0.44727]
+		},
+		"firstperson_righthand": {
+			"translation": [4.25, 4.75, 0]
+		},
+		"firstperson_lefthand": {
+			"translation": [7, 5.75, 0]
+		},
+		"ground": {
+			"translation": [0, 4.25, 0],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"gui": {
+			"rotation": [26, -45, 0],
+			"translation": [0, 2.25, 0],
+			"scale": [0.69922, 0.69922, 0.69922]
+		},
+		"head": {
+			"translation": [0, 13.75, 0]
+		},
+		"fixed": {
+			"translation": [0, 1.75, -1]
+		}
+	}
+}
