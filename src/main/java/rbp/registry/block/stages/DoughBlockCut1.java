@@ -1,4 +1,4 @@
-package rbp.registry.block.cakeconstructionstages;
+package rbp.registry.block.stages;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.AbstractBlock;

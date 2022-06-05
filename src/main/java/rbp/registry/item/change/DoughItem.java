@@ -1,3 +1,4 @@
+package rbp.registry.item.change;
 //package rbp.registry.item.itemstochangetblock;
 //
 //import com.google.common.collect.ImmutableMap;

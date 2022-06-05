@@ -1,4 +1,4 @@
-package rbp.registry.item.itemstochangetblock;
+package rbp.registry.item.change;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;
@@ -59,7 +59,10 @@ public class Rolling_Pin extends Item {
         TILLED_BLOCKS = Maps.newHashMap(ImmutableMap.of(
               //ModRegistry.HONEY_CAKE, ModRegistry.RAW_HONEY_CAKE.getDefaultState(),
               //ModRegistry.RAW_HONEY_CAKE, ModRegistry.HONEY_CAKE.getDefaultState(),
-                ModRegistry.DOUGH_BLOCK, ModRegistry.HONEY_CAKE.getDefaultState()
+                ModRegistry.SAUSAGE_BLOCK, 
+                ModRegistry.CHEESE_BLOCK.getDefaultState(),
+                ModRegistry.RAW_CAKE, 
+                ModRegistry.MILK_DOUGH_BLOCK.getDefaultState()
         ));
     }
 }

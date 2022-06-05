@@ -6,21 +6,19 @@ package rbp.registry;
 import rbp.*;
 import rbp.RBP;
 import rbp.registry.block.cake.*;
-import rbp.registry.block.cakeconstructionstages.DestructibleBlock;
-import rbp.registry.block.cakeconstructionstages.DoughBlock;
-import rbp.registry.block.cakeconstructionstages.DoughBlockCut1;
-import rbp.registry.block.cakeconstructionstages.DoughBlockCut2;
-import rbp.registry.block.cakeconstructionstages.DoughBlockCut3;
+//import rbp.registry.block.cakeconstructionstages.DestructibleBlock;
+import rbp.registry.block.stages.DoughBlock;
+import rbp.registry.block.stages.DoughBlockCut1;
+import rbp.registry.block.stages.DoughBlockCut2;
+import rbp.registry.block.stages.DoughBlockCut3;
 //import rbp.registry.block.cakeconstructionstages.DoughBlockCut4;
-import rbp.registry.block.cakeconstructionstages.DoughBlockSecond;
-import rbp.registry.block.cakeconstructionstages.DoughBlockThirt;
+import rbp.registry.block.stages.DoughBlockSecond;
+import rbp.registry.block.stages.DoughBlockThirt;
 import rbp.registry.block.crop.StrawberryBushBlock;
 import rbp.registry.block.crop.StrawberryBushBlockHay;
-import rbp.registry.item.itemstochangetblock.Knife;
-//import rbp.registry.item.itemstochangetblock.DoughBlock;
-//import rbp.registry.item.itemstochangetblock.DoughItem;
-import rbp.registry.item.itemstochangetblock.Rolling_Pin;
-import rbp.registry.item.itemstochangetblock.Straw;
+import rbp.registry.item.change.Knife;
+import rbp.registry.item.change.Rolling_Pin;
+import rbp.registry.item.change.Straw;
 import rbp.registry.item.get.GetSausageSlice;
 import rbp.registry.item.get.GetSliceBread;
 import rbp.registry.item.get.GetSliceCheese;
@@ -84,7 +82,7 @@ public class ModRegistry {
               stacks.add(new ItemStack(ModRegistry.DOUGH_BLOCK));
               stacks.add(new ItemStack(ModRegistry.CHOCOLATE_DOUGH));
               stacks.add(new ItemStack(ModRegistry.HONEY_DOUGH));    //MILK_DOUGH//
-              stacks.add(new ItemStack(ModRegistry.MILK_DOUGH));
+              stacks.add(new ItemStack(ModRegistry.MILK_DOUGH_BLOCK));
               stacks.add(ItemStack.EMPTY);
               stacks.add(ItemStack.EMPTY);
 
@@ -410,12 +408,19 @@ public class ModRegistry {
     public static final Item RAW_PIZZA_SLICE = new Item(new Item.Settings().food(new FoodComponent.Builder().hunger(9).saturationModifier(0.8f).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 300, 0), 0.3F).build()));
 
     //Stages of cakes
+
+    //Bread
     public static Block DOUGH_BLOCK = new DoughBlock();
     public static Block DOUGH_BLOCK_SECOND = new DoughBlockSecond();
     public static Block DOUGH_BLOCK_THIRT = new DoughBlockThirt();
     public static Block DOUGH_BLOCK_C1 = new DoughBlockCut1();
     public static Block DOUGH_BLOCK_C2 = new DoughBlockCut2();
     public static Block DOUGH_BLOCK_C3 = new DoughBlockCut3();
+
+    //FlatBread
+    public static Block MILK_DOUGH_BLOCK = new MilkDoughBlock();
+    public static Block FLAT_BREAD = new FlatBread();
+
     //public static Block DOUGH_BLOCK_C4 = new DoughBlockCut4();
 
 
@@ -426,10 +431,12 @@ public class ModRegistry {
         Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "flour"), FLOUR);
         Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "cocoa_dust"), COCOA_DUST);
 
-        //Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "dough"), DOUGH);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "dough"), new BlockItem(DOUGH_BLOCK, new Item.Settings()));
         Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "chocolate_dough"), CHOCOLATE_DOUGH);
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "milk_dough"), new AliasedBlockItem(MILK_DOUGH_BLOCK, new Item.Settings()));
         Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "honey_dough"), HONEY_DOUGH);
-        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "milk_dough"), MILK_DOUGH);
+        //Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "dough"), DOUGH);
+        //Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "milk_dough"), MILK_DOUGH);
 
         Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "bun"), BUN);
         Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "chocolate_bun"), CHOCOLATE_BUN);
@@ -525,7 +532,7 @@ public class ModRegistry {
         //Meat
         Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "raw_sausage"), RAW_SAUSAGE); 
         Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "sausage"), new AliasedBlockItem(SAUSAGE_BLOCK, new Item.Settings().maxCount(1)));
-        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "dough"), new BlockItem(DOUGH_BLOCK, new Item.Settings().maxCount(1)));
+
         Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "sausage_slice"), SAUSAGE_SLICE); 
         
         //Ingredients for Pizza
@@ -578,10 +585,13 @@ public class ModRegistry {
         Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "rolling_pin"), ROLLING_PIN);
         Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "straw"), STRAW);
         Registry.register(Registry.BLOCK, new Identifier(RBP.MOD_ID,"dough"), DOUGH_BLOCK);
+        Registry.register(Registry.BLOCK, new Identifier(RBP.MOD_ID,"milk_dough"), MILK_DOUGH_BLOCK);
         Registry.register(Registry.BLOCK, new Identifier(RBP.MOD_ID,"dough_1"), DOUGH_BLOCK_SECOND);
         Registry.register(Registry.BLOCK, new Identifier(RBP.MOD_ID,"dough_2"), DOUGH_BLOCK_THIRT);
         Registry.register(Registry.BLOCK, new Identifier(RBP.MOD_ID,"dough_3"), DOUGH_BLOCK_C1);
         Registry.register(Registry.BLOCK, new Identifier(RBP.MOD_ID,"dough_4"), DOUGH_BLOCK_C2);
         Registry.register(Registry.BLOCK, new Identifier(RBP.MOD_ID,"dough_5"), DOUGH_BLOCK_C3);
+
+        Registry.register(Registry.BLOCK, new Identifier(RBP.MOD_ID,"raw_flatbread"), FLAT_BREAD);
     }
 }

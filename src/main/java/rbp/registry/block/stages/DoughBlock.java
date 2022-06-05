@@ -1,4 +1,4 @@
-package rbp.registry.block.cakeconstructionstages;
+package rbp.registry.block.stages;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.AbstractBlock;
@@ -32,24 +32,28 @@ import net.minecraft.world.World;
 import rbp.RBP;
 import rbp.registry.ModRegistry;
 
-public class DoughBlockCut2 extends Block {
-   public static final VoxelShape SHAPE = Block.createCuboidShape(2.0999999999999996, 0, 5.1, 13.8, 5, 10.9);
-	public DoughBlockCut2() {
+public class DoughBlock extends Block {
+   public static final VoxelShape SHAPE = Block.createCuboidShape(5.1, 0, 5.1, 10.9, 5, 10.9);
+	public DoughBlock() {
       super(FabricBlockSettings.of(Material.PLANT).ticksRandomly().sounds(BlockSoundGroup.WOOL).nonOpaque());
     }
-
-          public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+    
+   public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
       return SHAPE;
    }
- 
+    
+    @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
        ItemStack itemStack = player.getStackInHand(hand);
-       if (itemStack.getItem() == ModRegistry.IRON_KNIFE) {
+       if (itemStack.getItem() == Item.fromBlock(ModRegistry.DOUGH_BLOCK)) {
+         if (!player.abilities.creativeMode) {
+            itemStack.decrement(1);
+         }
           if (!world.isClient) {
              //Direction direction = hit.getSide();
              //Direction direction2 = direction.getAxis() == Direction.Axis.Y ? player.getHorizontalFacing().getOpposite() : direction;
              //!world.playSound((PlayerEntity)null, pos, SoundEvents.BLOCK_PUMPKIN_CARVE, SoundCategory.BLOCKS, 1.0F, 1.0F);
-             world.setBlockState(pos, (BlockState)ModRegistry.DOUGH_BLOCK_C3.getDefaultState(), 11);
+             world.setBlockState(pos, (BlockState)ModRegistry.DOUGH_BLOCK_SECOND.getDefaultState(), 11);
              //ItemEntity itemEntity = new ItemEntity(world, (double)pos.getX() + 0.5D + (double)direction2.getOffsetX() * 0.65D, (double)pos.getY() + 0.1D, (double)pos.getZ() + 0.5D + (double)direction2.getOffsetZ() * 0.65D, new ItemStack(Items.PUMPKIN_SEEDS, 4));//
              //itemEntity.setVelocity(0.05D * (double)direction2.getOffsetX() + world.random.nextDouble() * 0.02D, 0.05D, 0.05D * (double)direction2.getOffsetZ() + world.random.nextDouble() * 0.02D);
              //world.spawnEntity(itemEntity);
@@ -60,4 +64,6 @@ public class DoughBlockCut2 extends Block {
           return super.onUse(state, world, pos, player, hand, hit);
        }
     }
+ 
+
  }

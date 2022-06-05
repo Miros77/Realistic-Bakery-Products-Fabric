@@ -1,4 +1,4 @@
-package rbp.registry.item.itemstochangetblock;
+package rbp.registry.item.change;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;

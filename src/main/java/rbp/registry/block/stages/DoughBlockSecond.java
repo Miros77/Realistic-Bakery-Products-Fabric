@@ -1,5 +1,4 @@
-package rbp.registry.block.cakeconstructionstages;
-
+package rbp.registry.block.stages;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -32,13 +31,13 @@ import net.minecraft.world.World;
 import rbp.RBP;
 import rbp.registry.ModRegistry;
 
-public class DoughBlock extends Block {
-   public static final VoxelShape SHAPE = Block.createCuboidShape(5.1, 0, 5.1, 10.9, 5, 10.9);
-	public DoughBlock() {
+public class DoughBlockSecond extends Block {
+   public static final VoxelShape SHAPE = Block.createCuboidShape(2.0999999999999996, 0, 5.1, 10.9, 5, 10.9);
+	public DoughBlockSecond() {
       super(FabricBlockSettings.of(Material.PLANT).ticksRandomly().sounds(BlockSoundGroup.WOOL).nonOpaque());
     }
-    
-   public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+
+      public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
       return SHAPE;
    }
  
@@ -52,7 +51,7 @@ public class DoughBlock extends Block {
              //Direction direction = hit.getSide();
              //Direction direction2 = direction.getAxis() == Direction.Axis.Y ? player.getHorizontalFacing().getOpposite() : direction;
              //!world.playSound((PlayerEntity)null, pos, SoundEvents.BLOCK_PUMPKIN_CARVE, SoundCategory.BLOCKS, 1.0F, 1.0F);
-             world.setBlockState(pos, (BlockState)ModRegistry.DOUGH_BLOCK_SECOND.getDefaultState(), 11);
+             world.setBlockState(pos, (BlockState)ModRegistry.DOUGH_BLOCK_THIRT.getDefaultState(), 11);
              //ItemEntity itemEntity = new ItemEntity(world, (double)pos.getX() + 0.5D + (double)direction2.getOffsetX() * 0.65D, (double)pos.getY() + 0.1D, (double)pos.getZ() + 0.5D + (double)direction2.getOffsetZ() * 0.65D, new ItemStack(Items.PUMPKIN_SEEDS, 4));//
              //itemEntity.setVelocity(0.05D * (double)direction2.getOffsetX() + world.random.nextDouble() * 0.02D, 0.05D, 0.05D * (double)direction2.getOffsetZ() + world.random.nextDouble() * 0.02D);
              //world.spawnEntity(itemEntity);
