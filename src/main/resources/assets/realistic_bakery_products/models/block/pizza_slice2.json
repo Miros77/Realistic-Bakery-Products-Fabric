@@ -4,7 +4,7 @@
 		"4": "realistic_bakery_products:block/pizza/cheese_crumb",
 		"5": "realistic_bakery_products:block/pizza/beetroot_slice",
 		"6": "realistic_bakery_products:block/pizza/pizza",
-		"7": "realistic_bakery_products:block/pizza/brown_mushroom",
+		"7": "realistic_bakery_products:block/pizza/coked_brown_mushroom",
 		"8": "realistic_bakery_products:block/pizza/sausage",
 		"particle": "realistic_bakery_products:block/pizza/pizza"
 	},
@@ -1362,19 +1362,6 @@
 			}
 		},
 		{
-			"from": [2.6, 0.4, 6.075],
-			"to": [2.85, 0.6, 6.575],
-			"rotation": {"angle": 0, "axis": "y", "origin": [3.1, 7.7, 8.025]},
-			"faces": {
-				"north": {"uv": [0, 0, 0.2, 0.3], "texture": "#7"},
-				"east": {"uv": [0, 0, 1, 0.3], "texture": "#7"},
-				"south": {"uv": [0, 0, 0.2, 0.3], "texture": "#7"},
-				"west": {"uv": [0, 0, 1, 0.3], "texture": "#7"},
-				"up": {"uv": [0, 0, 0.2, 1], "rotation": 180, "texture": "#7"},
-				"down": {"uv": [0, 0, 0.2, 1], "rotation": 180, "texture": "#7"}
-			}
-		},
-		{
 			"from": [12.9, 0.4, 9.875],
 			"to": [13.15, 0.6, 10.625],
 			"rotation": {"angle": 0, "axis": "y", "origin": [12.7, 7.7, 10.875]},
@@ -1710,19 +1697,6 @@
 				"west": {"uv": [8, 12, 9, 16], "rotation": 90, "texture": "#7"},
 				"up": {"uv": [8, 12, 9, 16], "rotation": 180, "texture": "#7"},
 				"down": {"uv": [8, 12, 9, 16], "rotation": 180, "texture": "#7"}
-			}
-		},
-		{
-			"from": [7.45, 0.4, 2.425],
-			"to": [7.95, 0.6, 2.675],
-			"rotation": {"angle": 0, "axis": "y", "origin": [8.25, 7.7, 3.675]},
-			"faces": {
-				"north": {"uv": [0, 0, 1, 0.3], "texture": "#7"},
-				"east": {"uv": [0, 0, 0.2, 0.3], "texture": "#7"},
-				"south": {"uv": [0, 0, 1, 0.3], "texture": "#7"},
-				"west": {"uv": [0, 0, 0.2, 0.3], "texture": "#7"},
-				"up": {"uv": [0, 0, 0.2, 1], "rotation": 270, "texture": "#7"},
-				"down": {"uv": [0, 0, 0.2, 1], "rotation": 90, "texture": "#7"}
 			}
 		},
 		{
@@ -2286,7 +2260,7 @@
 							"name": "m",
 							"origin": [14.3, 7.7, 18],
 							"color": 0,
-							"children": [104]
+							"children": []
 						},
 						{
 							"name": "m",
@@ -2298,31 +2272,31 @@
 							"name": "m",
 							"origin": [14.3, 7.7, 18],
 							"color": 0,
-							"children": [105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117]
+							"children": [104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116]
 						},
 						{
 							"name": "m",
 							"origin": [14.3, 7.7, 18],
 							"color": 0,
-							"children": [118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130]
+							"children": [117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129]
 						},
 						{
 							"name": "m",
 							"origin": [14.3, 7.7, 18],
 							"color": 0,
-							"children": [131]
+							"children": []
 						},
 						{
 							"name": "m",
 							"origin": [14.3, 7.7, 18],
 							"color": 0,
-							"children": [132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144]
+							"children": [130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142]
 						},
 						{
 							"name": "m",
 							"origin": [14.3, 7.7, 18],
 							"color": 0,
-							"children": [145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157]
+							"children": [143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155]
 						}
 					]
 				}

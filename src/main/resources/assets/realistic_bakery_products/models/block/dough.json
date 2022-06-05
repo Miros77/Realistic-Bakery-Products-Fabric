@@ -136,7 +136,7 @@
 			]
 		},
 		{
-			"name": "VoxelShape",
+			"name": "VoxelShapes",
 			"origin": [8, 8, 8],
 			"color": 0,
 			"children": []

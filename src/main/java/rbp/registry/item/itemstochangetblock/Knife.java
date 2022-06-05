@@ -16,11 +16,11 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemUsageContext;
 import rbp.registry.ModRegistry;
 
-public class Rolling_Pin extends Item {
+public class Knife extends Item {
 
     public static final Map<Block, BlockState> TILLED_BLOCKS;
 
-    public Rolling_Pin(Settings settings) {
+    public Knife(Settings settings) {
         super(settings);
     }
 
@@ -58,9 +58,14 @@ public class Rolling_Pin extends Item {
     static {
 
         TILLED_BLOCKS = Maps.newHashMap(ImmutableMap.of(
-              //ModRegistry.HONEY_CAKE, ModRegistry.RAW_HONEY_CAKE.getDefaultState(),
-              //ModRegistry.RAW_HONEY_CAKE, ModRegistry.HONEY_CAKE.getDefaultState(),
-                ModRegistry.DOUGH_BLOCK, ModRegistry.HONEY_CAKE.getDefaultState()
+                ModRegistry.HONEY_CAKE, ModRegistry.RAW_HONEY_CAKE.getDefaultState(),
+                ModRegistry.RAW_HONEY_CAKE, ModRegistry.HONEY_CAKE.getDefaultState(),
+                ModRegistry.DOUGH_BLOCK, ModRegistry.DOUGH_BLOCK_SECOND.getDefaultState()
+                //ModRegistry.DOUGH_BLOCK_THIRT, ModRegistry.HONEY_CAKE.getDefaultState()
+                //ModRegistry.DOUGH_BLOCK_C1, ModRegistry.DOUGH_BLOCK_C2.getDefaultState(),
+                //ModRegistry.DOUGH_BLOCK_C2, ModRegistry.DOUGH_BLOCK_C3.getDefaultState(),
+                //ModRegistry.DOUGH_BLOCK_C3, ModRegistry.DOUGH_BLOCK_C4.getDefaultState(),
+                //ModRegistry.DOUGH_BLOCK_C4, ModRegistry.RAW_BREADBLOCK.getDefaultState()
         ));
     }
 }

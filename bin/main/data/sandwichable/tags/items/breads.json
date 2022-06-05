@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "minecraft:bread",
-    "sandwichable:toasted_bread_slice",
-    "realistic_bakery_products:bread_slice",
-    "sandwichable:bread_slice"
-  ]
-}

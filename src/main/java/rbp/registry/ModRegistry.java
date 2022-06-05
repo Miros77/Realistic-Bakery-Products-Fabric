@@ -7,10 +7,18 @@ import rbp.*;
 import rbp.RBP;
 import rbp.registry.block.cake.*;
 import rbp.registry.block.cakeconstructionstages.DestructibleBlock;
+import rbp.registry.block.cakeconstructionstages.DoughBlock;
+import rbp.registry.block.cakeconstructionstages.DoughBlockCut1;
+import rbp.registry.block.cakeconstructionstages.DoughBlockCut2;
+import rbp.registry.block.cakeconstructionstages.DoughBlockCut3;
+//import rbp.registry.block.cakeconstructionstages.DoughBlockCut4;
+import rbp.registry.block.cakeconstructionstages.DoughBlockSecond;
+import rbp.registry.block.cakeconstructionstages.DoughBlockThirt;
 import rbp.registry.block.crop.StrawberryBushBlock;
 import rbp.registry.block.crop.StrawberryBushBlockHay;
+import rbp.registry.item.itemstochangetblock.Knife;
 //import rbp.registry.item.itemstochangetblock.DoughBlock;
-import rbp.registry.item.itemstochangetblock.DoughItem;
+//import rbp.registry.item.itemstochangetblock.DoughItem;
 import rbp.registry.item.itemstochangetblock.Rolling_Pin;
 import rbp.registry.item.itemstochangetblock.Straw;
 import rbp.registry.item.get.GetSausageSlice;
@@ -379,9 +387,9 @@ public class ModRegistry {
    //Tools
     //Iron  
     public static final UseSpoon GOLDEN_SPOON = new UseSpoon(new Item.Settings().recipeRemainder(ModRegistry.GOLDEN_SPOON).maxCount(1)); 
-    public static final UseKnife GOLDEN_KNIFE = new UseKnife(new Item.Settings().recipeRemainder(ModRegistry.GOLDEN_KNIFE).maxCount(1));   
+    public static final UseKnife GOLDEN_KNIFE = new UseKnife(new Item.Settings().recipeRemainder(ModRegistry.GOLDEN_KNIFE).maxCount(1));    
     //Gold
-    public static final UseKnife IRON_KNIFE = new UseKnife(new Item.Settings().recipeRemainder(ModRegistry.IRON_KNIFE).maxCount(1)); 
+    public static final UseKnife IRON_KNIFE = new UseKnife(new Item.Settings().recipeRemainder(ModRegistry.IRON_KNIFE).maxCount(1));  
     public static final UseSpoon IRON_SPOON = new UseSpoon(new Item.Settings().recipeRemainder(ModRegistry.IRON_SPOON).maxCount(1)); 
 
     //public static final Rolling_Pin ROLLING_PIN = new Rolling_Pin(ToolMaterials.RollingPinMaterial, new Item.Settings().maxCount(1)); 
@@ -402,7 +410,15 @@ public class ModRegistry {
     public static final Item RAW_PIZZA_SLICE = new Item(new Item.Settings().food(new FoodComponent.Builder().hunger(9).saturationModifier(0.8f).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 300, 0), 0.3F).build()));
 
     //Stages of cakes
-    public static Block DOUGH_BLOCK = new DestructibleBlock(FabricBlockSettings.of(Material.PLANT).strength(0.5F).sounds(BlockSoundGroup.WOOL));
+    public static Block DOUGH_BLOCK = new DoughBlock();
+    public static Block DOUGH_BLOCK_SECOND = new DoughBlockSecond();
+    public static Block DOUGH_BLOCK_THIRT = new DoughBlockThirt();
+    public static Block DOUGH_BLOCK_C1 = new DoughBlockCut1();
+    public static Block DOUGH_BLOCK_C2 = new DoughBlockCut2();
+    public static Block DOUGH_BLOCK_C3 = new DoughBlockCut3();
+    //public static Block DOUGH_BLOCK_C4 = new DoughBlockCut4();
+
+
 
 //=========================================Register: Items and Block=========================================//
     public static void registerItems() {
@@ -509,7 +525,7 @@ public class ModRegistry {
         //Meat
         Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "raw_sausage"), RAW_SAUSAGE); 
         Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "sausage"), new AliasedBlockItem(SAUSAGE_BLOCK, new Item.Settings().maxCount(1)));
-        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "dough"), new DoughItem(DOUGH_BLOCK, new Item.Settings().maxCount(1)));
+        Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "dough"), new BlockItem(DOUGH_BLOCK, new Item.Settings().maxCount(1)));
         Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "sausage_slice"), SAUSAGE_SLICE); 
         
         //Ingredients for Pizza
@@ -562,8 +578,10 @@ public class ModRegistry {
         Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "rolling_pin"), ROLLING_PIN);
         Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "straw"), STRAW);
         Registry.register(Registry.BLOCK, new Identifier(RBP.MOD_ID,"dough"), DOUGH_BLOCK);
-        //Registry.register(Registry.ITEM, new Identifier(RBP.MOD_ID, "glass_bowl"), GLASS_BOWL);   
-
-
+        Registry.register(Registry.BLOCK, new Identifier(RBP.MOD_ID,"dough_1"), DOUGH_BLOCK_SECOND);
+        Registry.register(Registry.BLOCK, new Identifier(RBP.MOD_ID,"dough_2"), DOUGH_BLOCK_THIRT);
+        Registry.register(Registry.BLOCK, new Identifier(RBP.MOD_ID,"dough_3"), DOUGH_BLOCK_C1);
+        Registry.register(Registry.BLOCK, new Identifier(RBP.MOD_ID,"dough_4"), DOUGH_BLOCK_C2);
+        Registry.register(Registry.BLOCK, new Identifier(RBP.MOD_ID,"dough_5"), DOUGH_BLOCK_C3);
     }
 }

@@ -11,7 +11,7 @@
 			"faces": {
 				"north": {"uv": [1, 8, 12, 16], "texture": "#6"},
 				"east": {"uv": [1, 8, 15, 16], "texture": "#6"},
-				"south": {"uv": [3, 8, 15, 16], "texture": "#6"},
+				"south": {"uv": [4, 8, 15, 16], "texture": "#6"},
 				"west": {"uv": [1, 8, 15, 16], "texture": "#6"},
 				"up": {"uv": [4, 2, 15, 16], "texture": "#6"},
 				"down": {"uv": [1, 2, 15, 13], "rotation": 90, "texture": "#6", "cullface": "down"}

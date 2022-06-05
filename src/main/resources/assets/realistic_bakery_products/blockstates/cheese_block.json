@@ -13,6 +13,7 @@
         "level=9": { "model": "realistic_bakery_products:block/cheese_block_slice9" },
         "level=10": { "model": "realistic_bakery_products:block/cheese_block_slice10" },
         "level=11": { "model": "realistic_bakery_products:block/cheese_block_slice11" },
-        "level=12": { "model": "realistic_bakery_products:block/cheese_block_slice12" }
+        "level=12": { "model": "realistic_bakery_products:block/cheese_block_slice12" },
+        "level=13": { "model": "realistic_bakery_products:block/cheese_block_slice13" }
     }
 }
