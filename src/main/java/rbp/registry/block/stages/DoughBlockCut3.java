@@ -35,7 +35,7 @@ import rbp.registry.ModRegistry;
 public class DoughBlockCut3 extends Block {
    public static final VoxelShape SHAPE = Block.createCuboidShape(2.0999999999999996, 0, 5.1, 13.8, 5, 10.9);
 	public DoughBlockCut3() {
-      super(FabricBlockSettings.of(Material.PLANT).ticksRandomly().sounds(BlockSoundGroup.WOOL).nonOpaque());
+      super(FabricBlockSettings.of(Material.CAKE).ticksRandomly().sounds(BlockSoundGroup.WOOL).nonOpaque());
     }
 
           public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {

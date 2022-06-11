@@ -134,10 +134,7 @@ public class Cheese extends Block {
        protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
          builder.add(BITES);
        }
-     
-       public int getComparatorOutput(BlockState state, World world, BlockPos pos) {
-         return (7 - (Integer)state.get(BITES)) * 2;
-       }
+
      
        public boolean hasComparatorOutput(BlockState state) {
          return true;

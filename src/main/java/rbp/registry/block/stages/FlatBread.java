@@ -1,5 +1,4 @@
 package rbp.registry.block.stages;
-
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -10,10 +9,10 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 
-public class DoughBlockThirt extends Block{
-   public static final VoxelShape SHAPE = Block.createCuboidShape(2.0999999999999996, 0, 5.1, 13.8, 5, 10.9);
+public class FlatBread extends Block{
+    public static final VoxelShape SHAPE = Block.createCuboidShape(1.0D, 0.0D, 1.0D, 15.0D, 0.6D, 15.0D);
 
-    public DoughBlockThirt() {
+    public FlatBread() {
       super(FabricBlockSettings.of(Material.CAKE).ticksRandomly().sounds(BlockSoundGroup.WOOL).nonOpaque());
   }
 
