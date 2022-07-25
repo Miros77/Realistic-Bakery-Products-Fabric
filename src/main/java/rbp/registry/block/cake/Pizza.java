@@ -1,6 +1,7 @@
 package rbp.registry.block.cake;
 
 //Item
+import net.minecraft.entity.ItemEntity;
 import net.minecraft.item.ItemStack;
 
 //Block
@@ -14,7 +15,6 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.CakeBlock;
 
 //Util
 import net.minecraft.util.math.BlockPos;
@@ -27,10 +27,8 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.entity.player.PlayerEntity;
 
 //Stats
-import net.minecraft.stat.Stats;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
-import net.minecraft.state.property.Properties;
 
 //World
 
@@ -42,6 +40,8 @@ import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldView;
+import rbp.registry.ModRegistry;
+import rbp.registry.block.stages.properties.PropertiesBites;
 
 //Sound
 
@@ -59,39 +59,27 @@ public class Pizza extends Block {
       return BITES_TO_SHAPE[(Integer)state.get(BITES)];
    }
 
+   @Override
    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-      if (world.isClient) {  
-         
-         ItemStack itemStack = player.getStackInHand(hand);
-         if (this.tryEat(world, pos, state, player).isAccepted()) {
-            return ActionResult.SUCCESS;
+      ItemStack itemStack = player.getStackInHand(hand);
+      if (player.getStackInHand(Hand.MAIN_HAND).getItem() != ModRegistry.IRON_KNIFE && player.getStackInHand(Hand.MAIN_HAND).getItem() != ModRegistry.GOLDEN_KNIFE) {
+
+         if (!world.isClient)  {
+
+            int i = (Integer)state.get(BITES);
+            world.spawnEntity(new ItemEntity((World) world, pos.getX() + 0.5, pos.getY() + 0.3, pos.getZ() + 0.5, new ItemStack(ModRegistry.PIZZA_SLICE, 1)));
+            if (i < 3) {
+               world.setBlockState(pos, (BlockState)state.with(BITES, i + 1),3);
+               return ActionResult.PASS;
+            } else {
+               world.removeBlock(pos, false);
+            }
          }
 
-         if (itemStack.isEmpty()) {
-            return ActionResult.CONSUME;
-         }
-      }
-
-      return this.tryEat(world, pos, state, player);
-   }
-
-   public ActionResult tryEat(WorldAccess world, BlockPos pos, BlockState state, PlayerEntity player) {
-      if (!player.canConsume(false)) {
-         return ActionResult.PASS;
-      } else {
-         player.incrementStat(Stats.EAT_CAKE_SLICE);
-         player.getHungerManager().add(9, 0.8F);
- 
-         int i = (Integer)state.get(BITES);
-         if (i < 3) {
-            world.setBlockState(pos, (BlockState)state.with(BITES, i + 1), 3);
-         } else {
-            world.removeBlock(pos, false);
-         }
- 
          return ActionResult.SUCCESS;
+      } else {
+         return super.onUse(state, world, pos, player, hand, hit);
       }
-
    }
 
    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState newState, WorldAccess world, BlockPos pos, BlockPos posFrom) {
@@ -119,7 +107,7 @@ public class Pizza extends Block {
    }
 
    static {
-      BITES = Properties.LEVEL_3;
+      BITES = PropertiesBites.LEVEL_4;
       BITES_TO_SHAPE = new VoxelShape[]{
          Block.createCuboidShape(1.0D, 0.0D, 1.0D, 15.0D, 0.6D, 15.0D), 
          Block.createCuboidShape(3.0D, 0.0D, 1.0D, 15.0D, 0.6D, 15.0D), 

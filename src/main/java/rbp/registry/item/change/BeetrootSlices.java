@@ -13,8 +13,6 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
-import net.minecraft.block.BeehiveBlock;
-import net.minecraft.block.SnowBlock;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemUsageContext;
 import rbp.registry.ModRegistry;
@@ -56,7 +54,7 @@ public class BeetrootSlices extends Item {
     static {
 
         TILLED_BLOCKS = Maps.newHashMap(ImmutableMap.of(
-                ModRegistry.STRAWBERRYBUSH, ModRegistry.STRAWBERRYBUSH_HAY.getDefaultState()
+                ModRegistry.CHEESE_FLAT_BLOCK, ModRegistry.CHEESE_FLAT_BLOCK_BEETROOT.getDefaultState()
         ));
     }
 }

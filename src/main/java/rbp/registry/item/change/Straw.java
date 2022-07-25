@@ -6,6 +6,7 @@ import java.util.Map;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
@@ -13,11 +14,11 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
-import net.minecraft.block.BeehiveBlock;
-import net.minecraft.block.SnowBlock;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemUsageContext;
 import rbp.registry.ModRegistry;
+import rbp.registry.block.crop.StrawberryBushBlock;
+import rbp.registry.block.crop.StrawberryBushBlockHay;
 
 public class Straw extends Item {
 
@@ -34,10 +35,10 @@ public class Straw extends Item {
         BlockPos blockPos = context.getBlockPos();
 
         if (context.getSide() != Direction.DOWN && world.getBlockState(blockPos.up()).isAir()) {
-            BlockState blockState = (BlockState)TILLED_BLOCKS.get(world.getBlockState(blockPos).getBlock());
+            BlockState blockState = TILLED_BLOCKS.get(world.getBlockState(blockPos).getBlock());
             if (blockState != null) {
                 PlayerEntity playerEntity = context.getPlayer();
-                world.playSound(playerEntity, blockPos, SoundEvents.BLOCK_WET_GRASS_PLACE, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                world.playSound(playerEntity, blockPos, SoundEvents.BLOCK_SWEET_BERRY_BUSH_PLACE, SoundCategory.BLOCKS, 1.0F, 1.0F);
                 if (!world.isClient) {
                     world.setBlockState(blockPos, blockState, 11);
                 }
@@ -56,7 +57,9 @@ public class Straw extends Item {
     static {
 
         TILLED_BLOCKS = Maps.newHashMap(ImmutableMap.of(
-                ModRegistry.STRAWBERRYBUSH, ModRegistry.STRAWBERRYBUSH_HAY.getDefaultState()
+        ModRegistry.STRAWBERRYBUSH,
+        ModRegistry.STRAWBERRYBUSH_HAY
+        .getDefaultState()
         ));
     }
 }

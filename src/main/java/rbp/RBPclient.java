@@ -9,8 +9,10 @@ public class RBPclient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        BlockRenderLayerMap.INSTANCE.putBlock(ModRegistry.STRAWBERRYBUSH, RenderLayer.getCutout());
+
         BlockRenderLayerMap.INSTANCE.putBlock(ModRegistry.STRAWBERRYBUSH_HAY, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModRegistry.STRAWBERRYBUSH, RenderLayer.getCutout());
+
     }
 
 

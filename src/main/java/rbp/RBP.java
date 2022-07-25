@@ -1,5 +1,6 @@
 package rbp;
 
+//import rbp.registry.BlockRegistry;
 import rbp.registry.ModRegistry;
 import net.fabricmc.api.ModInitializer;
 

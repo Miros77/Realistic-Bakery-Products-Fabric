@@ -1,0 +1,8 @@
+{
+    "variants": {
+    	"level=0": { "model": "realistic_bakery_products:block/sausage/raw_cheese_flatbread_17" },
+        "level=1": { "model": "realistic_bakery_products:block/beetroot/raw_cheese_flatbread_18" },
+        "level=2": { "model": "realistic_bakery_products:block/beetroot/raw_cheese_flatbread_19" },
+        "level=3": { "model": "realistic_bakery_products:block/beetroot/raw_cheese_flatbread_20" }
+    }
+}

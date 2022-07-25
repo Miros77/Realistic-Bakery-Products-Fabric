@@ -1,0 +1,8 @@
+
+{
+    "variants": {
+        "bites=0": { "model": "realistic_bakery_products:block/pizza_cut/pizza_block_cut_0" },
+        "bites=1": { "model": "realistic_bakery_products:block/pizza_cut/pizza_block_cut_1" }
+    }
+}
+

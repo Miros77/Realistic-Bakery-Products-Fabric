@@ -36,15 +36,9 @@ public class Knife extends Item {
                 PlayerEntity playerEntity = context.getPlayer();
                 world.playSound(playerEntity, blockPos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
                 if (!world.isClient) {
-                    world.setBlockState(blockPos, blockState, 11);
+                    world.setBlockState(blockPos, blockState, 1);
                 }
 
-                if (playerEntity != null)
-                //{
-                //    context.getStack().damage(1, (LivingEntity)playerEntity, ((e) -> {
-                //        e.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND);
-                //    }));
-                //}
                 return ActionResult.success(world.isClient);
             }
         }
@@ -58,10 +52,7 @@ public class Knife extends Item {
     static {
 
         TILLED_BLOCKS = Maps.newHashMap(ImmutableMap.of(
-                ModRegistry.DOUGH_BLOCK_THIRT, ModRegistry.DOUGH_BLOCK_C1.getDefaultState(),
-                ModRegistry.DOUGH_BLOCK_C1, ModRegistry.DOUGH_BLOCK_C2.getDefaultState(),
-                ModRegistry.DOUGH_BLOCK_C2, ModRegistry.DOUGH_BLOCK_C3.getDefaultState(),
-                ModRegistry.DOUGH_BLOCK_C3, ModRegistry.RAW_BREADBLOCK.getDefaultState()
+                ModRegistry.HONEY_CAKE, ModRegistry.HONEY_CAKE.getDefaultState()
         ));
     }
 }

@@ -1,0 +1,9 @@
+
+{
+    "variants": {
+        "level=0": { "model": "realistic_bakery_products:block/raw_chocolate_shortcake" },
+        "level=1": { "model": "realistic_bakery_products:block/raw_chocolate_shortcake_1" },
+        "level=2": { "model": "realistic_bakery_products:block/raw_chocolate_shortcake_2" },
+        "level=3": { "model": "realistic_bakery_products:block/raw_chocolate_shortcake_3" }
+    }
+}

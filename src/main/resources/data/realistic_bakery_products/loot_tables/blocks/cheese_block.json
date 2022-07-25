@@ -12,9 +12,9 @@
       "conditions": [
         {
           "condition": "minecraft:block_state_property",
-          "block": "realistic_bakery_products:cheese_block",
+          "block": "realistic_bakery_products:cheese_block", 
           "properties": {
-            "bites": "0"
+            "level": "0"
           }
         }
       ],

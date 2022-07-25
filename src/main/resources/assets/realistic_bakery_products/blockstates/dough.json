@@ -1,7 +1,10 @@
 {
   "variants": {
-    "": {
-      "model": "realistic_bakery_products:block/dough"
-    }
+    "bites=0": { "model": "realistic_bakery_products:block/dough" },
+    "bites=1": { "model": "realistic_bakery_products:block/dough_1" },
+    "bites=2": { "model": "realistic_bakery_products:block/dough_2" },
+    "bites=3": { "model": "realistic_bakery_products:block/dough_3" },
+    "bites=4": { "model": "realistic_bakery_products:block/dough_4" },
+    "bites=5": { "model": "realistic_bakery_products:block/dough_5" }
   }
 }

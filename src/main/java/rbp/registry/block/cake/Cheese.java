@@ -71,7 +71,7 @@ import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldView;
-import static rbp.registry.block.cake.properties.PropertiesBites.LEVEL_13;
+import static rbp.registry.block.stages.properties.PropertiesBites.LEVEL_13;
 
 public class Cheese extends Block {
 	public Cheese() {
@@ -85,43 +85,34 @@ public class Cheese extends Block {
    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
 	   return BITES_TO_SHAPE[(Integer)state.get(BITES)];
 	}
-   
-   public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-      if (world.isClient) {
-         ItemStack itemStack = player.getStackInHand(hand);
-         if (this.tryEat(world, pos, state, player).isAccepted()) {
+
+    @Override
+    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+        ItemStack itemStack = player.getStackInHand(hand);
+        if (itemStack.getItem() == ModRegistry.IRON_KNIFE || itemStack.getItem() == ModRegistry.GOLDEN_KNIFE) {
+
+            if (!world.isClient)  {
+
+                int i = (Integer)state.get(BITES);
+                world.spawnEntity(new ItemEntity((World) world, pos.getX() + 0.0D, pos.getY() + 0.1D, pos.getZ() + 0.5D, new ItemStack(ModRegistry.CHEESE_SLICE, 1)));
+                //public Item Entity(World world, double x, double y, double z, ItemStack stack, double velocityX, double velocityY, double velocityZ) {
+                //    this((EntityType<? extends ItemEntity>)EntityType.ITEM, world);
+                //    this.setPosition(x, y, z);
+                //    this.setVelocity(velocityX, velocityY, velocityZ);
+                //  this.setStack(stack);
+                if (i < 13) {
+                    world.setBlockState(pos, (BlockState)state.with(BITES, i + 1),3);
+                    return ActionResult.PASS;
+                } else {
+                    world.removeBlock(pos, false);
+                }
+            }
+
             return ActionResult.SUCCESS;
-         }
-
-         if (itemStack.isEmpty()) {
-            return ActionResult.CONSUME;
-         }
-      }
-
-      return this.tryEat(world, pos, state, player);
-   }
-
-   public ActionResult tryEat(WorldAccess world, BlockPos pos, BlockState state, PlayerEntity player) {
-		//helped fix : Reece
-		
-		/*if (stack.getItem() == Items.IRON_SWORD || player.getStackInHand(Hand.OFF_HAND).getItem() == Items.IRON_SWORD)*/ 
-          if (player.getStackInHand(Hand.MAIN_HAND).getItem() != ModRegistry.IRON_KNIFE && player.getStackInHand(Hand.MAIN_HAND).getItem() != ModRegistry.GOLDEN_KNIFE && player.getStackInHand(Hand.OFF_HAND).getItem() != ModRegistry.IRON_KNIFE && player.getStackInHand(Hand.OFF_HAND).getItem() != ModRegistry.GOLDEN_KNIFE)
-      {
-           return ActionResult.PASS;
-        } else if (!player.canConsume(true)) {
-           return ActionResult.PASS;
         } else {
-           world.spawnEntity(new ItemEntity((World) world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ModRegistry.CHEESE_SLICE, 1)));
-           int i = (Integer)state.get(BITES);
-           if (i < 13) {
-              world.setBlockState(pos, (BlockState)state.with(BITES, i + 1), 3);
-           } else {
-              world.removeBlock(pos, false);
-           }
-
-           return ActionResult.SUCCESS;
+            return super.onUse(state, world, pos, player, hand, hit);
         }
-      }
+    }
 
         public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState newState, WorldAccess world, BlockPos pos, BlockPos posFrom) {
          return direction == Direction.DOWN && !state.canPlaceAt(world, pos) ? Blocks.AIR.getDefaultState() : super.getStateForNeighborUpdate(state, direction, newState, world, pos, posFrom);
@@ -130,12 +121,7 @@ public class Cheese extends Block {
        public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
          return world.getBlockState(pos.down()).getMaterial().isSolid();
        }
-     
-       protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-         builder.add(BITES);
-       }
 
-     
        public boolean hasComparatorOutput(BlockState state) {
          return true;
        }
@@ -144,8 +130,11 @@ public class Cheese extends Block {
          return false;
        }
 
-       
-        static {
+       protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+        builder.add(BITES);
+    }
+
+    static {
          BITES = LEVEL_13;
          BITES_TO_SHAPE = new VoxelShape[]{
             Block.createCuboidShape(1, 0, 1, 15, 8, 15), 

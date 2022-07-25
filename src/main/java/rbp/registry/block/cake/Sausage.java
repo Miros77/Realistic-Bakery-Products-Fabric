@@ -20,9 +20,6 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.PumpkinBlock;
-import net.minecraft.block.FlowerPotBlock;
-import net.minecraft.block.ChainBlock;
 
 //Util
 import net.minecraft.util.math.BlockPos;
@@ -52,7 +49,7 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldView;
 
-import static rbp.registry.block.cake.properties.PropertiesBites.LEVEL_29;
+import static rbp.registry.block.stages.properties.PropertiesBites.LEVEL_29;
 
 public class Sausage extends Block {
 	public Sausage() {
@@ -67,42 +64,28 @@ public class Sausage extends Block {
 	   return BITES_TO_SHAPE[(Integer)state.get(BITES)];
 	}
 
+	@Override
 	public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-		if (world.isClient) {
-		   ItemStack itemStack = player.getStackInHand(hand);
-		   if (this.tryEat(world, pos, state, player).isAccepted()) {
-			  return ActionResult.SUCCESS;
-		   }
-  
-		   if (itemStack.isEmpty()) {
-			  return ActionResult.CONSUME;
-		   }
-		}
-		return this.tryEat(world, pos, state, player);
-	 }
-  //
-     
-	 public ActionResult tryEat(WorldAccess world, BlockPos pos, BlockState state, PlayerEntity player) {
-		//helped fix : Reece
-		
-		/*if (stack.getItem() == Items.IRON_SWORD || player.getStackInHand(Hand.OFF_HAND).getItem() == Items.IRON_SWORD)*/ 
-          if (player.getStackInHand(Hand.MAIN_HAND).getItem() != ModRegistry.IRON_KNIFE && player.getStackInHand(Hand.MAIN_HAND).getItem() != ModRegistry.GOLDEN_KNIFE && player.getStackInHand(Hand.OFF_HAND).getItem() != ModRegistry.IRON_KNIFE && player.getStackInHand(Hand.OFF_HAND).getItem() != ModRegistry.GOLDEN_KNIFE)
-      {
-           return ActionResult.PASS;
-        } else if (!player.canConsume(true)) {
-           return ActionResult.PASS;
-        } else {
-           world.spawnEntity(new ItemEntity((World) world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ModRegistry.SAUSAGE_SLICE, 1)));
-           int i = (Integer)state.get(BITES);
-           if (i < 29) {
-              world.setBlockState(pos, (BlockState)state.with(BITES, i + 1), 3);
-           } else {
-              world.removeBlock(pos, false);
-           }
+		ItemStack itemStack = player.getStackInHand(hand);
+		if (itemStack.getItem() == ModRegistry.IRON_KNIFE || itemStack.getItem() == ModRegistry.GOLDEN_KNIFE) {
 
-           return ActionResult.SUCCESS;
-        }
-     }
+			if (!world.isClient)  {
+
+				int i = (Integer)state.get(BITES);
+				world.spawnEntity(new ItemEntity((World) world, pos.getX() + 0.0D, pos.getY() + 0.1D, pos.getZ() + 0.5D, new ItemStack(ModRegistry.SAUSAGE_SLICE, 1)));
+				if (i < 29) {
+					world.setBlockState(pos, (BlockState)state.with(BITES, i + 1),3);
+					return ActionResult.PASS;
+				} else {
+					world.removeBlock(pos, false);
+				}
+			}
+
+			return ActionResult.SUCCESS;
+		} else {
+			return super.onUse(state, world, pos, player, hand, hit);
+		}
+	}
 //
 	 public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState newState, WorldAccess world, BlockPos pos, BlockPos posFrom) {
 		return direction == Direction.DOWN && !state.canPlaceAt(world, pos) ? Blocks.AIR.getDefaultState() : super.getStateForNeighborUpdate(state, direction, newState, world, pos, posFrom);

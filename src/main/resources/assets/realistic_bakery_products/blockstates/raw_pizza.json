@@ -1,9 +1,7 @@
-
 {
-    "variants": {
-        "level=0": { "model": "realistic_bakery_products:block/raw_pizza" },
-        "level=1": { "model": "realistic_bakery_products:block/raw_pizza_slice1" },
-        "level=2": { "model": "realistic_bakery_products:block/raw_pizza_slice2" },
-        "level=3": { "model": "realistic_bakery_products:block/raw_pizza_slice3" }
+  "variants": {
+    "": {
+      "model": "realistic_bakery_products:block/raw_pizza"
     }
+  }
 }
