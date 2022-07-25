@@ -23,7 +23,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 import rbp.registry.ModRegistry;
-import rbp.registry.ModRegistry;
 
 public class FlatBread1 extends Block {
    public static final VoxelShape SHAPE = Block.createCuboidShape(1.0D, 0.0D, 1.0D, 15.0D, 0.6D, 15.0D);

@@ -6,7 +6,6 @@ import java.util.Map;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
@@ -17,8 +16,6 @@ import net.minecraft.world.World;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemUsageContext;
 import rbp.registry.ModRegistry;
-import rbp.registry.block.crop.StrawberryBushBlock;
-import rbp.registry.block.crop.StrawberryBushBlockHay;
 
 public class Straw extends Item {
 

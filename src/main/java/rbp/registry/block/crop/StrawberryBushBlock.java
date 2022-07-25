@@ -14,7 +14,6 @@ import net.minecraft.block.BlockState;
 
 //My
 import rbp.registry.ModRegistry;
-import rbp.registry.ModRegistry;
 
 //Sound
 import net.minecraft.sound.SoundCategory;

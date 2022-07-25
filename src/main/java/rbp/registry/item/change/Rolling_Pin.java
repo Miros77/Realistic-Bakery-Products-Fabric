@@ -1,12 +1,9 @@
 package rbp.registry.item.change;
 
 import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.Sets;
 import net.minecraft.block.*;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
-import net.minecraft.item.AxeItem;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
@@ -15,8 +12,6 @@ import net.minecraft.world.World;
 import rbp.registry.ModRegistry;
 
 import java.util.Map;
-import java.util.Set;
-import java.util.function.Consumer;
 public class Rolling_Pin extends Item {
 
     protected static final Map<Block, Block> STRIPPED_BLOCKS;
