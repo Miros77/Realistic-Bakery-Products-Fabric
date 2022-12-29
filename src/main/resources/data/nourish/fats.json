@@ -1,0 +1,28 @@
+{
+	"values": [
+		"realistic_bakery_products:raw_cookie",
+		"realistic_bakery_products:crumbs_cookie",
+		"realistic_bakery_products:raw_chocolate_cookie",
+		"realistic_bakery_products:chocolate_cookie",
+		"realistic_bakery_products:cream",
+		"realistic_bakery_products:chocolate_cream",
+		"realistic_bakery_products:strawberry_cream",
+		"realistic_bakery_products:honey_cream",
+		"realistic_bakery_products:raw_donut",
+		"realistic_bakery_products:raw_cream_donut",
+		"realistic_bakery_products:raw_strawberry_donut",
+		"realistic_bakery_products:raw_chocolate_donut",
+		"realistic_bakery_products:raw_honey_donut",
+		"realistic_bakery_products:coked_donut",
+		"realistic_bakery_products:cream_donut",
+		"realistic_bakery_products:strawberry_donut",
+		"realistic_bakery_products:chocolate_donut",
+		"realistic_bakery_products:honey_donut",
+		"realistic_bakery_products:raw_honey_shortcake",
+		"realistic_bakery_products:raw_chocolate_shortcake",
+		"realistic_bakery_products:raw_flatbread",
+		"realistic_bakery_products:cheese_slice",
+		"realistic_bakery_products:raw_cheese_flatbread",
+		"realistic_bakery_products:cheese_flatbread"
+	]
+}
